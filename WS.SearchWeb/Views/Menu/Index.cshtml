@@ -1,0 +1,328 @@
+﻿@{ 
+    ViewData["Title"] = "菜单管理";
+    ViewData["group"] = "菜单管理";
+    ViewData["groupurl"] = "#"; 
+}
+<style>
+    form{
+          padding: 10px;
+    }
+</style>
+@Html.Partial("_location")
+<form class="layui-form" action="">
+    <div class="body-box">
+        <div class="layui-row">
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                @*<div class="layui-form-item">
+                    <label class="layui-form-label">角色：</label>
+                    <div class="layui-input-block">
+                        <select id="role_id" name="role_id" lay-search>
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>*@
+            </div>
+            <div class="layui-col-lg3 layui-col-md4 layui-col-sm6">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">菜单名：</label>
+                    <div class="layui-input-block">
+                        <input id="keywords" type="text" class="layui-input" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn layui-btn-normal" style="margin-left: 15px" lay-submit="" onclick="searchmenu()">
+                        <i class="layui-icon layui-icon-search"></i>
+                        检索
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table id="menu" lay-filter="menu" style="background: #ffffff"></table>
+    </div>
+</form>
+
+<script type="text/html" id="menu-bar">
+    {{# if(d.state == true) {  }}
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>   
+    @*<button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="禁用" lay-event="chgState">
+        禁用
+    </button>*@
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+    {{# } else {  }}
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>
+    @*<button type="button" class="layui-btn layui-btn-sm" title="启用" lay-event="chgState">
+        启用
+    </button>*@
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+    {{# } }}
+
+</script>
+
+
+<script type="text/html" id="menu-toolbar">
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" onclick="addmenu()">
+        <i class="layui-icon layui-icon-add-1"></i>
+        新增菜单
+    </button>
+@*    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" onclick="editusercode()">
+        <i class="layui-icon">&#xe642;</i>
+        修改密码
+    </button>*@
+</script>
+
+
+
+<script>
+    let table;
+    var menus ={};
+    
+        layui.use(['table', 'form', 'jquery', 'layer'], function () {
+            table = layui.table;
+            let form = layui.form;
+            let layer = layui.layer;
+            let $ = layui.jquery;
+            
+            $.GET("api/baseMenu/listall","", function (data, status, xhr) {
+                if (data.code == 0) {
+                    data.data.forEach((item,index) =>{
+                        menus[item.menuId] = item.menuName;                        
+                    })                    
+                } else {
+                    layer.alert(data.msg);
+                }
+            });
+            table.render({
+                elem: '#menu'
+                , autoSort: false
+        
+                , limit: 20
+                , limits: [10, 20, 30, 50, 100]
+                , height: "full-125"
+                , defaultToolbar: ['filter']
+                , toolbar: "#menu-toolbar"
+           
+                , url: ApiBaseUrl + "api/baseMenu/listall"                
+                , headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('imt_token')
+                }
+                , request: {
+                    pageName: 'page', //页码的参数名称，默认：page
+                    limitName: 'size' //每页数据量的参数名，默认：limit
+                }
+                , page: true //开启分页
+                , cols:
+                [
+                    [ //表头
+                    
+                        { field: 'menuName', title: '菜单名', align: "center", width: "15%", style: "font-size:medium" }                      
+                        , { field: 'menuIcon', title: '菜单图标', align: "center", width: "15%", style: "font-size:medium", 
+                            templet: function (d) {
+                                    var html = '<i class="layui-icon '+d.menuIcon+'"></i>';
+                                    if (d.menuIcon == '0') {
+                                        html = d.menuIcon;
+                                    }                                  
+                                    return html;
+                                }}                      
+                        , { field: 'menuPid', title: '上级菜单', align: "center", width: "15%", style: "font-size:medium" , 
+                            templet: function (d) {
+                                    var html = menus[d.menuPid];
+                                    if (d.menuPid == 0) {
+                                        html = '无';
+                                    }                                  
+                                    return html;
+                                }}                      
+                        , { field: 'menuUrl', title: '菜单链接', align: "center", width: "15%", style: "font-size:medium" }                      
+                        , { field: 'openWay', title: '打开方式', align: "center", width: "10%", style: "font-size:medium" }                      
+                   
+                        , { field: 'createTime', title: '创建时间', align: "center", width: "15%", style: "font-size:medium" }
+                        , { field: 'state', title: '状态', align: "center", width: "5%", style: "font-size:medium",
+                            templet: function (d) {
+                                    var html = '<div style="color:red">禁用中</div>';
+                                    if (d.state == '1') {
+                                        html = '<div style="color:green">启用中</div>';
+                                    }                                  
+                                    return html;
+                                }}
+                        
+                        , { title: "操作", toolbar: "#menu-bar", align: "center", width: "10%", style: "font-size:medium" }
+                    ]
+                ]
+                , parseData: function (responseJSON) {
+                    if (responseJSON.status == "error") {
+                        layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 });
+                    }
+                    return {
+                        "code": responseJSON.code,
+                        "msg": responseJSON.msg,
+                        "count": responseJSON.count,
+                        "data": responseJSON.data
+                    };
+                }
+                , done: function (res, curr, count) {
+                    var beforeCurr = curr;
+                    var dataLength = res.data.length;
+                    var count = res.count;
+                    if (dataLength == 0 && count != 0) {
+                        table.reload("menu", {
+                            page: { curr: beforeCurr - 1 }
+                        })
+                    }
+                }
+        });
+
+        table.on("tool(menu)", function (obj) {
+            if (obj.event === 'remove') {
+                window.remove(obj);
+            }
+            if (obj.event === "edit") {
+                window.edit(obj);
+            }
+            if (obj.event === 'chgState') {
+                window.chgState(obj);
+            }
+            
+        });
+
+            
+
+        window.edit = function (obj) {
+            layer.open({
+                type: 2,
+                title: "<strong>修改菜单</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: encodeURI("../Menu/AddMenu"
+                    + '?menuId=' + obj.data['menuId']                   
+                    + '?menuIcon=' + obj.data['menuIcon']                   
+                    + '?menuName=' + obj.data['menuName']
+                    + '?menuPid=' + obj.data['menuPid']
+                    + '?menuUrl=' + obj.data['menuUrl']
+                    + '?openWay=' + obj.data['openWay']
+                    + '?createTime=' + obj.data['createTime']
+                    + '?state=' + obj.data['state']),
+                shadeClose: true,
+                cancel: function (index, layero) {
+                    table.reload("dict");
+                }
+            });
+        }
+
+        
+
+        window.chgState = function (obj) {
+            var menuId = obj.data['menuId'];
+            var menuName = obj.data['menuName'];
+            var is_visible = obj.data['state'];
+            if (is_visible) {
+                layer.confirm('请问您是否确定要禁用菜单"' + menuName + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/baseMenu/forbidOrActive?menuId=" + menuId,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("菜单已禁用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("menu");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+                });
+            }
+            else {
+                layer.confirm('请问您是否确定要启用菜单"' + menuName + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/baseMenu/forbidOrActive?menuId=" + menuId,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("菜单已启用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("menu");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+                    
+                });
+            }
+        }
+
+        window.remove = function (obj) {
+            layer.confirm('请问您确定要永久删除此菜单吗?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                layer.close(index);
+                $.ajax({
+                    url: ApiBaseUrl+  'api/baseMenu/delete?id=' + obj.data['menuId'],
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    type: 'delete',
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", "Bearer " + imt_token);
+                        
+                        request.setRequestHeader("uid", imt_uid);
+                    },
+                    success: function (responseJSON) {
+                        if (responseJSON.code == 0) {
+                            layer.msg("菜单" + obj.data['menuName'] + "删除成功！", { icon: 1, time: 1500 }, function () {
+                                table.reload("menu");
+                            });
+                        }
+                        else if (responseJSON.code == 1) {
+                            layer.msg(responseJSON.msg, { icon: 2, time: 1500 });
+                        }
+                        else if (responseJSON.code == "invalid-token") {
+                            layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 }, function () {
+                                window.localStorage.token = null;
+                                if (top.location.href != location.href) { top.location.href = "../Home/Login"; }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    });
+
+    function searchmenu() {
+        var regu = "^[ ]+$";
+        var re = new RegExp(regu);
+        var name = $("#keywords").val();
+        if(name=='' || re.test(name)){
+            table.reload('menu', {
+                url: ApiBaseUrl + "api/baseMenu/listall"          
+                , page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        }
+        else{
+            table.reload('menu', {
+                url: ApiBaseUrl + "api/baseMenu/page?menuName="+name          
+                , page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        }
+        
+    }
+
+        function addmenu() {
+            layer.open({
+                type: 2,
+                title: "<strong>添加菜单</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: "../Menu/AddMenu"
+            });
+        }
+    
+
+   
+    
+    </script>
+

@@ -1,0 +1,33 @@
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/bin/Debug/net6.0/WS.Core.deps.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/bin/Debug/net6.0/WS.Core.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/bin/Debug/net6.0/WS.Core.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/obj/Debug/net6.0/WS.Core.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Core/bin/Debug/net6.0/WS.Core.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/bin/Debug/net6.0/WS.Core.deps.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/bin/Debug/net6.0/WS.Core.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/bin/Debug/net6.0/WS.Core.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/bin/Debug/net6.0/WS.Core.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Core/obj/Debug/net6.0/WS.Core.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/bin/Debug/net6.0/WS.Core.deps.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/bin/Debug/net6.0/WS.Core.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/bin/Debug/net6.0/WS.Core.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/bin/Debug/net6.0/WS.Core.xml
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.csproj.AssemblyReference.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.AssemblyInfoInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.AssemblyInfo.cs
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.csproj.CoreCompileInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/Debug/net6.0/WS.Core.pdb

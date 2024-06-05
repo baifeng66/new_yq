@@ -1,0 +1,48 @@
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.deps.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.CopyComplete
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/refint/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/obj/Debug/net6.0/ref/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.deps.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.CopyComplete
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/refint/WS.Db.IBLL.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.IBLL/obj/Debug/net6.0/ref/WS.Db.IBLL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.deps.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.IBLL.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/bin/Debug/net6.0/WS.Db.Model.xml
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.AssemblyReference.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.AssemblyInfoInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.AssemblyInfo.cs
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.CoreCompileInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.csproj.CopyComplete
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/refint/WS.Db.IBLL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/WS.Db.IBLL.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/Debug/net6.0/ref/WS.Db.IBLL.dll

@@ -1,0 +1,57 @@
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.deps.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Core.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Core.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.CopyComplete
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/refint/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/obj/Debug/net6.0/ref/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.xml
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.Db.DAL/bin/Debug/net6.0/WS.Core.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.deps.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Core.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Core.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Core.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.xml
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.CopyComplete
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/refint/WS.Db.DAL.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.Db.DAL/obj/Debug/net6.0/ref/WS.Db.DAL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.deps.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Db.DAL.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Core.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Core.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Core.xml
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/bin/Debug/net6.0/WS.Db.Model.xml
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.AssemblyReference.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.AssemblyInfoInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.AssemblyInfo.cs
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.CoreCompileInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.csproj.CopyComplete
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/refint/WS.Db.DAL.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/WS.Db.DAL.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/Debug/net6.0/ref/WS.Db.DAL.dll

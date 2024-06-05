@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/WS.SearchWeb.props" />
+</Project>

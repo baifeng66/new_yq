@@ -1,0 +1,267 @@
+﻿
+@{
+    ViewData["Title"] = "首页";
+    ViewData["group"] = "首页";
+    ViewData["groupurl"] = "#";
+}
+        
+        <script src="~/lib/echarts-5.0.0/echarts.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js" charset="utf-8"></script>
+        <script src="~/lib/layui/layui.all.js"></script>
+        <script src="~/js/jqeury-ext.js" asp-append-version="true"></script>
+        <style>   
+            /* 顶部统计 */
+            .top-div{
+                display: flex;    
+                padding-left: 40px;
+                margin-top: 20px;
+                position: relative;
+            } 
+            .top-div>div{
+                width: 200px;
+                height: 70px;
+                position: relative;
+                margin-right: 20px;
+                border-radius: 5px;
+            }
+            .top-div .item-count{
+                display: flex;
+                padding: 30px 20px;
+                color: #eee;
+                font-size: 20px;
+            }
+            .item-count i{
+                font-size: 50px; 
+                color: #fff;
+            }
+            .item-count .item-body{
+                margin-left: 10px;
+            }
+            #case-all,#case-xs,#case-ms{
+                font-size: 33px;
+                margin-top: 5px;
+                text-align: center;
+            }
+            .case-all{             
+                background: linear-gradient(to right, #44589e, #3d82ec);
+            }
+            .xs-all{        
+                background: linear-gradient(to right, #684bd9, #9280ee);
+            }
+            .ms-all{          
+                background: linear-gradient(to right, #258cca, #03b5d0);
+            }
+            .item-user{
+                padding: 27px 20px;
+                border: 3px solid #939393;   
+                padding-right: 0px;    
+                width: 250px !important;     
+                float: right;
+                right: 0;
+                position: absolute !important;
+            }
+            .item-user div{
+                color: #969696;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+            .item-user label {
+                width: 80px;
+                text-align: left;
+                display: inline-block;
+            }
+            .item-user span{
+                color: #333;
+            }
+
+            /* 案由统计 */
+            .body-div{
+                margin-top: 20px;
+                padding-left: 25px;
+            }
+            .item-div{
+                display: inline-block;
+                vertical-align: middle;
+                width: 170px;
+                height: 80px;
+                background: #5a79b5;
+                margin: 10px 15px;
+                padding: 5px;
+                border-radius: 5px;
+                position: relative;
+                color: #eee;
+            }
+            .item-div .item-name{
+                text-align: center;
+                margin-top: 3px;
+            }
+            .item-div .item-count{
+                font-size: 40px;
+                text-align: center;
+                position: absolute;
+                bottom: 1px;
+                font-weight: bold;
+                width: 100%;
+            }
+            
+        </style>
+        @Html.Partial("_location")
+            <!-- 顶部标题组合 -->
+            <div class="top-div">
+                <div class="item-count case-all">
+                    <div class="item-icon">
+                        <i class="layui-icon layui-icon-slider "></i> 
+                    </div>
+                    <div class="item-body">
+                        <div class="name">案件总数</div>
+                        <div id="case-all">26665</div>
+                    </div>
+                </div>
+                <div class="item-count xs-all">
+                    <div class="item-icon">
+                        <i class="layui-icon layui-icon-transfer "></i> 
+                    </div>
+                    <div class="item-body">
+                        <div class="name">刑事案件</div>
+                        <div id="case-xs">10300</div>
+                    </div>
+                </div>
+                <div class="item-count ms-all">
+                    <div class="item-icon">
+                        <i class="layui-icon layui-icon-cols"></i> 
+                    </div>
+                    <div class="item-body">
+                        <div class="name">民事案件</div>
+                        <div id="case-ms">16365</div>
+                    </div>
+                </div>
+                <div class="item-user">
+                    <div class="uesr-name">
+                        <label>账户名：</label>
+                        <span id="name"></span>
+                    </div>
+                    <div class="user-time">
+                        <label>上次登录：</label>
+                        <span id="time"></span>
+                    </div>
+                </div>
+           </div>
+           <div class="body-div">
+                <div class="item-div">
+                    <div class="item-name">盗伐林木罪</div>
+                    <div class="item-count">56</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">监伐林木罪</div>
+                    <div class="item-count">666</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">非法采矿罪</div>
+                    <div class="item-count">95</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">非法收购、运输、出售濒危野生动物罪</div>
+                    <div class="item-count">56</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">监伐林木罪</div>
+                    <div class="item-count">666</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">非法采矿罪</div>
+                    <div class="item-count">95</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">非法收购、运输、出售濒危野生动物罪</div>
+                    <div class="item-count">56</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">监伐林木罪</div>
+                    <div class="item-count">666</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">非法采矿罪</div>
+                    <div class="item-count">95</div>
+                </div>
+                <div class="item-div">
+                    <div class="item-name">非法收购、运输、出售濒危野生动物罪</div>
+                    <div class="item-count">56</div>
+                </div>
+                
+           </div>
+         
+@section scripts
+{
+    
+    <script>  
+        
+        //案件总数
+        $.GET("api/caseDoc/total", "", function (data, status, xhr) {
+                if (data.code == 0) {
+                    
+                    $("#case-all").html(data.count);
+                } else {                  
+                    layer.alert(data.msg);
+                }
+            });
+        //刑事案件
+         $.GET("api/caseDoc/typetotal?caseType=刑事", "", function (data, status, xhr) {
+                if (data.code == 0) {
+                    
+                    $("#case-xs").html(data.count);
+                } else {
+                    layer.alert(data.msg);
+                }
+            });
+        //民事案件
+         $.GET("api/caseDoc/typetotal?caseType=民事", "", function (data, status, xhr) {
+                if (data.code == 0) {
+                    
+                    $("#case-ms").html(data.count);
+                } else {
+                    layer.alert(data.msg);
+                }
+            });
+
+        //案由
+        $.GET("api/caseDoc/ReasonStatistic", "", function (data, status, xhr) {
+                if (data.code == 0) {
+                    var resons = data.data;
+                    var html = '';
+                    for(var key in resons){
+                         html += '<div class="item-div">'+
+                                     '<div class="item-name">'+ key +'</div>'+
+                                     '<div class="item-count">'+ resons[key] +'</div>'+
+                                 '</div>';                   
+                    }
+                    $(".body-div").html(html);                  
+                } else {
+                    layer.alert(data.msg);
+                }
+            });
+
+        //当前用户信息
+         $.GET("api/userInfo/getCurrentUser", "", function (data, status, xhr) {
+                if (data.code == 0) {                    
+                    $("#name").html(data.data.loginName);
+                    //$("#time").html(data.data.lastLoginTime);
+                    $("#time").html(imt_last);
+
+                } else {
+                    layer.alert(data.msg);
+                }
+            });
+        //获取参数
+        function getParams(param_id) {
+            var query = decodeURI(window.location.href).split("?")
+            query.shift();       
+            for (var i = 0; i < query.length; i++) {
+                var pair = query[i].split("=");
+                if (pair[0] == param_id) {
+                    return pair[1];
+                }
+            }
+        }
+        
+    </script>
+}

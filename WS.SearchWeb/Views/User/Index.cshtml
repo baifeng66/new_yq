@@ -1,0 +1,333 @@
+﻿@{ 
+    ViewData["Title"] = "用户管理";
+    ViewData["group"] = "用户管理";
+    ViewData["groupurl"] = "/user/index"; 
+}
+<style>
+    form{
+          padding: 10px;
+    }
+</style>
+@Html.Partial("_location")
+<form class="layui-form" action="">
+    <div class="body-box">
+        <div class="layui-row">
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                @*<div class="layui-form-item">
+                    <label class="layui-form-label">角色：</label>
+                    <div class="layui-input-block">
+                        <select id="role_id" name="role_id" lay-search>
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>*@
+            </div>
+            <div class="layui-col-lg3 layui-col-md4 layui-col-sm6">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名：</label>
+                    <div class="layui-input-block">
+                        <input id="keywords" type="text" class="layui-input" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn layui-btn-normal" style="margin-left: 15px" lay-submit="" onclick="searchuser()">
+                        <i class="layui-icon layui-icon-search"></i>
+                        检索
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table id="user" lay-filter="user" style="background: #ffffff"></table>
+    </div>
+</form>
+
+<script type="text/html" id="user-bar">
+    {{# if(d.state == true) {  }}
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改密码" lay-event="editcode">
+        修改密码
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="禁用" lay-event="chgState">
+        禁用
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+    {{# } else {  }}
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改密码" lay-event="editcode">
+        修改密码
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm" title="启用" lay-event="chgState">
+        启用
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+    {{# } }}
+
+</script>
+
+
+<script type="text/html" id="user-toolbar">
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" onclick="adduser()">
+        <i class="layui-icon layui-icon-add-1"></i>
+        新增用户
+    </button>
+@*    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" onclick="editusercode()">
+        <i class="layui-icon">&#xe642;</i>
+        修改密码
+    </button>*@
+</script>
+
+
+
+<script>
+    let table;
+        layui.use(['table', 'form', 'jquery', 'layer'], function () {
+            table = layui.table;
+            let form = layui.form;
+            let layer = layui.layer;
+            let $ = layui.jquery;
+
+            table.render({
+                elem: '#user'
+                , autoSort: false
+        
+                , limit: 20
+                , limits: [10, 20, 30, 50, 100]
+                , height: "full-125"
+                , defaultToolbar: ['filter']
+                , toolbar: "#user-toolbar"
+           
+                , url: ApiBaseUrl + "api/userInfo/page"                
+                , headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('imt_token')
+                }
+                , request: {
+                    pageName: 'page', //页码的参数名称，默认：page
+                    limitName: 'size' //每页数据量的参数名，默认：limit
+                }
+                , page: true //开启分页
+                , cols:
+                [
+                    [ //表头
+                    
+                        { field: 'loginName', title: '用户名', align: "center", width: "14%", style: "font-size:medium" }
+                        , { field: 'trueName', title: '真实姓名', align: "center", width: "14%", style: "font-size:medium" }
+                    //, { field: 'password', title: '密码', align: "center", width: "10%", style: "font-size:medium" }
+                        , { field: 'phoneNum', title: '手机号', align: "center", width: "14%", style: "font-size:medium" }
+                   
+                        , { field: 'createTime', title: '创建时间', align: "center", width: "14%", style: "font-size:medium" }
+                        , { field: 'updateTime', title: '更新时间', align: "center", width: "14%", style: "font-size:medium" }
+                        , { field: 'state', title: '状态', align: "center", width: "6%", style: "font-size:medium" ,
+                            templet: function (d) {
+                                    var html = '<div style="color:red">禁用中</div>';
+                                    if (d.state == '1') {
+                                        html = '<div style="color:green">启用中</div>';
+                                    }                                  
+                                    return html;
+                                }}
+                        , { title: "操作", toolbar: "#user-bar", align: "center", width: "24%", style: "font-size:medium" }
+                    ]
+                ]
+                , parseData: function (responseJSON) {
+                    if (responseJSON.status == "error") {
+                        layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 });
+                    }
+                    return {
+                        "code": responseJSON.code,
+                        "msg": responseJSON.msg,
+                        "count": responseJSON.count,
+                        "data": responseJSON.data
+                    };
+                }
+                , done: function (res, curr, count) {
+                    var beforeCurr = curr;
+                    var dataLength = res.data.length;
+                    var count = res.count;
+                    if (dataLength == 0 && count != 0) {
+                        table.reload("user", {
+                            page: { curr: beforeCurr - 1 }
+                        })
+                    }
+                }
+        });
+
+        table.on("tool(user)", function (obj) {
+            if (obj.event === 'remove') {
+                window.remove(obj);
+            }
+            if (obj.event === "edit") {
+                window.edit(obj);
+            }
+            if (obj.event === 'chgState') {
+                window.chgState(obj);
+            }
+            if (obj.event === 'editcode') {
+                window.editcode(obj);
+            }
+        });
+
+            
+
+        window.edit = function (obj) {
+            console.log(obj)
+            layer.open({
+                type: 2,
+                title: "<strong>修改用户</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: encodeURI("../User/AddUser"
+                    + '?userId=' + obj.data['userId']                   
+                    + '?loginName=' + obj.data['loginName']
+                    + '?createTime=' + obj.data['createTime']
+                    + '?createBy=' + obj.data['createBy']
+                    + '?phoneNum=' + obj.data['phoneNum']
+                    + '?trueName=' + obj.data['trueName']
+                    + '?rid=' + obj.data['rid']                  
+                    + '?loginPwd=' + obj.data['loginPwd']
+                    + '?state=' + obj.data['state']),
+                shadeClose: true,
+                cancel: function (index, layero) {
+                    table.reload("user");
+                }
+            });
+        }
+
+        
+
+        window.chgState = function (obj) {
+            var userid = obj.data['userId'];
+            var username = obj.data['loginName'];
+            var is_visible = obj.data['state'];
+            console.log(is_visible)
+            if (is_visible == '1') {
+                layer.confirm('请问您是否确定要禁用用户"' + username + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/userInfo/forbidOrActive?userId=" + userid,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("用户已禁用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("user");
+                             });ss
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+
+                });
+            }
+            else {
+                layer.confirm('请问您是否确定要启用用户"' + username + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/userInfo/forbidOrActive?userId=" + userid,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("用户已启用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("user");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+
+                });
+            }
+        }
+
+        window.remove = function (obj) {
+            layer.confirm('请问您确定要永久删除此用户及其所有记录吗?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                layer.close(index);
+                $.ajax({
+                    url: ApiBaseUrl+  'api/userInfo/delete?id=' + obj.data['userId'],
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    type: 'delete',
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", "Bearer " + imt_token);
+                        request.setRequestHeader("type", 0);
+                        request.setRequestHeader("uid", imt_uid);
+                    },
+                    success: function (responseJSON) {
+                        if (responseJSON.code == 0) {
+                            layer.msg("用户" + obj.data['loginName'] + "删除成功！", { icon: 1, time: 1500 }, function () {
+                                table.reload("user");
+                            });
+                        }
+                        else if (responseJSON.code == 1) {
+                            layer.msg(responseJSON.msg, { icon: 2, time: 1500 });
+                        }
+                        else if (responseJSON.code == "invalid-token") {
+                            layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 }, function () {
+                                window.localStorage.token = null;
+                                if (top.location.href != location.href) { top.location.href = "../Home/Login"; }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    });
+
+    function searchuser() {
+        var regu = "^[ ]+$";
+        var re = new RegExp(regu);
+        var name = $("#keywords").val();
+        table.reload('user', {
+            url: ApiBaseUrl + "api/userInfo/page?loginName="+name          
+            , page: {
+                curr: 1 //重新从第 1 页开始
+            }
+        });
+        //if(name=='' || re.test(name)){
+        //    table.reload('user', {
+        //        url: ApiBaseUrl + "api/userInfo/listall"          
+        //        , page: {
+        //            curr: 1 //重新从第 1 页开始
+        //        }
+        //    });
+        //}
+        //else{
+        //    table.reload('user', {
+        //        url: ApiBaseUrl + "api/userInfo/page?loginName="+name          
+        //        , page: {
+        //            curr: 1 //重新从第 1 页开始
+        //        }
+        //    });
+        //}
+        
+    }
+
+        function adduser() {
+            layer.open({
+                type: 2,
+                title: "<strong>添加用户</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: "../User/AddUser"
+            });
+        }
+    
+
+    window.editcode = function (obj) {
+        layer.open({
+            type: 2,
+            title: "<strong>修改用户密码</strong>",
+            shade: 0.1,
+            area: ["550px", "450px"],
+            content: encodeURI("../User/Editcode"
+                + '?userId=' + obj.data['userId']
+                ),
+            shadeClose: true,
+            cancel: function (index, layero) {
+                table.reload("user");
+            }
+        });
+    }
+    </script>
+

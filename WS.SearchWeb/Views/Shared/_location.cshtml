@@ -1,0 +1,56 @@
+﻿<style>
+    .nav-wrap{
+        margin-top: 10px;
+        padding-bottom: 8px;
+        box-shadow: 0px 4px 5px rgba(164, 164, 164, 0.3);
+    }
+    .icon-location{
+        display: inline;
+        padding-left: 20px;
+    }
+    .icon-location i{
+        font-size: 25px;
+        color: #1E9FFF;
+    }
+    .layui-breadcrumb > * {
+        font-size: 15px;
+    }
+
+    .layui-breadcrumb a {
+        color: #00130B !important;
+        /*font-weight: bold;*/
+    }
+    .layui-breadcrumb a:hover{
+        color: #1e9fff !important;
+    }
+    .layui-breadcrumb span[lay-separator] {
+        color: #00130B;
+    }
+    .location {
+        width: 30px;
+        height: 30px;
+    }
+    
+</style>
+<div class="nav-wrap">
+    <div class="icon-location">
+        <i class="layui-icon layui-icon-location"></i>  
+    </div>
+    <span class="layui-breadcrumb" lay-separator="|" style="visibility: visible;">
+        <a href="@ViewData["groupurl"]" id="loc-group">@ViewData["group"]</a>
+        <span lay-separator="" id="loc-sep">></span>
+        <a id="loc-title">@ViewData["Title"]</a>
+    </span>
+    
+</div>
+<script>
+    $(function () {
+        if ($("#loc-group").text() == $("#loc-title").text()) {
+            $("#loc-group,#loc-sep").hide();
+        }
+        var backurl = document.referrer;//上一页地址
+        var url = document.createElement('a');
+        url.href = backurl;       
+               
+    });
+</script>

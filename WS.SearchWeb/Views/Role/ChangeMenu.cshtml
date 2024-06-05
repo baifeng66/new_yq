@@ -1,0 +1,104 @@
+﻿@{ 
+    ViewData["Title"] = "权限管理";
+    ViewData["group"] = "角色管理";
+    ViewData["groupurl"] = "/role/index"; 
+}
+<style>
+    .layui-tree-set{
+        margin: 10px;
+    }
+    .layui-form-checked[lay-skin="primary"] i{
+        border-color: #1e9fff !important;
+        background-color: #1e9fff;
+    }
+    .layui-form-checkbox[lay-skin="primary"]:hover i{
+        border-color: #1e9fff;
+    }
+</style>
+
+    <div id="menus" class="demo-tree-more"></div>
+    <br />
+    <div class="bottom layui-form-item" style="text-align: center;">
+        <div class="button-container">
+            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm1" id="menu_set" style="width: 60px;">
+                <font size="2">确认</font>
+            </button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm1" style="width: 60px;" onclick="closeLayer();">取消</button>
+        </div>
+    </div>
+
+<script>
+    layui.use(['form','jquery', 'layer', 'tree'], function () {
+        let form = layui.form;
+        let layer = layui.layer;
+        let $ = layui.jquery;
+        var tree = layui.tree;
+        var rid = getParams("roleId");
+        var treenode = [];
+        $.GET('api/baseMenu/treeall?rid='+rid, '', function (res) {
+            $.each(res.data, function (index, item) {
+                treenode.push(item)
+            });
+        }, false)
+
+       
+        tree.render({
+            elem: '#menus'
+            ,data: treenode
+            ,showCheckbox: true  //是否显示复选框
+            ,showLine: false 
+            ,id: 'menu'            
+            ,click: function(obj){
+            var data = obj.data;  //获取当前点击的节点数据
+                layer.msg('状态：'+ obj.state + '<br>节点数据：' + JSON.stringify(data));
+            }
+        });
+
+        
+        $("#menu_set").on("click", function () {
+            var checkData = tree.getChecked('menu');
+            var menuids = [];
+            checkData.forEach((item,index) => {
+                if(item.children.length >0){
+                    var childs = item.children;
+                    childs.forEach((item,indx) =>{
+                        var menuid = item.id.split('_')[1];
+                        menuids.push(menuid);
+                    })
+                }
+                menuids.push(item.id.split('_')[1]);
+            });
+            console.log(checkData)
+            console.log(menuids)
+            var menu_ids = menuids.join(",")
+            $.POSTForm('api/baseMenu/set', { rid: rid, ids: menu_ids }, function (res) {
+                if (res.code == 0) {
+                    layer.msg("修改权限成功！", { icon: 1, time: 1500 }, function () {
+                        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                        parent.layer.close(index); //再执行关闭 
+                    });                  
+                }
+                else {
+                    layer.msg(res.msg, { icon: 2, time: 1500 });
+                }
+
+            }, false)
+        });
+
+    });
+    function closeLayer() {
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭
+    }
+    //获取参数
+    function getParams(param_id) {
+        var query = decodeURI(window.location.href).split("?")
+        query.shift();      
+        for (var i = 0; i < query.length; i++) {
+            var pair = query[i].split("=");
+            if (pair[0] == param_id) {
+                return pair[1];
+            }
+        }
+    }
+</script>

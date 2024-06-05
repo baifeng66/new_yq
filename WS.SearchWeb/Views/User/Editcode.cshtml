@@ -1,0 +1,224 @@
+﻿@{
+    ViewData["Title"] = "修改用户密码";
+    ViewData["group"] = "用户管理";
+    ViewData["groupurl"] = "/user/index"; 
+
+}
+<style>
+    .required{
+        color: red;
+    }
+     .layui-fluid{
+        padding-top: 10px;
+    }
+    .layui-form-label{
+        width: 118px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .layui-input-block{
+        margin-left: 141px;
+    }
+</style>
+<form class="layui-form" action="">
+    <div class="layui-fluid">
+        <div class="layui-form-item" id="code-box">
+            <label class="layui-form-label">新密码：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input id="txtCode" type="text" class="layui-input" lay-verify="required|pwd" placeholder="请输入密码">
+                <div class="icon-css-view" style="width: 40px;height: 40px;top: 7px;right: 0px;text-align: center;position: absolute;">
+                    <i id="iconShowView" class="layui-icon layui-icon-face-smile" style="color: lawngreen;"></i>
+                    <i id="iconHiddenView" class="layui-icon layui-icon-face-cry" style="color: orangered;" hidden></i>
+                </div>                                
+            </div>
+        </div>
+        <div class="layui-form-item" id="pwd-box">
+            <label class="layui-form-label">确认密码：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input id="txtCode1" type="password" class="layui-input" lay-verify="required|pwd" placeholder="请再输入一遍密码">
+                <div class="icon-css-view" style="width: 40px;height: 40px;top: 7px;right: 0px;text-align: center;position: absolute;">
+                    <i id="iconShowView1" class="layui-icon layui-icon-face-smile" style="color: lawngreen;"></i>
+                    <i id="iconHiddenView1" class="layui-icon layui-icon-face-cry" style="color: orangered;" hidden></i>
+                </div>                               
+            </div>
+        </div>
+        <br />
+        <div class="bottom layui-form-item" style="text-align: center;">
+            <div class="button-container">
+                <button id="xiugai" type="submit" class="layui-btn layui-btn-normal layui-btn-sm1" lay-submit="" lay-filter="user-add" style="width: 60px;">
+                    <font size="2">确认</font>
+                </button>
+                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm1" style="width: 60px;" onclick="closeLayer();">取消</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="~/js/jquery.md5.js"></script>
+<script>
+    //获取参数
+    function getParams(param_id) {
+        var query = decodeURI(window.location.href).split("?")
+        query.shift();      
+        for (var i = 0; i < query.length; i++) {
+            var pair = query[i].split("=");
+            if (pair[0] == param_id) {
+                return pair[1];
+            }
+        }
+    }
+    //修改参数
+    function replaceParams(Pname, NewVal) {
+        var ori_Url = this.location.href.toString();
+        var reg = eval('/(' + Pname + '=)([^&]*/gi');
+        var new_Url = ori_Url.replace(reg, Pname + '=' + NewVal);
+        this.location = new_Url;
+        return new_Url;
+    }
+
+</script>
+
+<script>
+    layui.use(['form', 'jquery'], function () {
+        let form = layui.form;
+        let $ = layui.jquery;
+
+        form.verify({
+            //pwd: [
+            //    /^[\S]{6,12}$/
+            //    , '密码必须6到12位，且不能出现空格'
+            //]
+            pwd: function (value) {
+                if (value.length < 6) {
+                    return "密码必须大于6位数";
+                }
+                var lv = 0;
+                if (value.match(/[a-z]/g)) { ++lv; }
+                if (value.match(/[0-9]/g)) { ++lv; }
+                if (value.match(/(.[^a-z0-9])/g)) { ++lv; }
+                if (value.length < 6) { lv = 0; }
+                if (lv < 3) {
+                    return "密码强度不符合要求，需包含：字母、数字、特殊字符";
+                }
+            },
+
+        });
+
+
+        // 获取传参
+        //var template = getParams("template");
+        var userId = getParams("userId");
+        console.log(userId)
+        var newPassword;
+        
+        var pwd1;
+        var pwd2;
+        var pwd3;
+        // 是否显示密码
+        var password = $("#txtCode");
+        var password1 = $("#txtCode1");
+        $("#iconShowView").on('click', function (e) {
+            console.log("smile");
+            password[0].type = "text";
+            $("#iconShowView")[0].hidden = true;
+            $("#iconHiddenView")[0].hidden = false;
+            form.render();
+        });
+        $("#iconHiddenView").on('click', function (e) {
+            console.log("cry");
+            password[0].type = "password";
+            $("#iconShowView")[0].hidden = false;
+            $("#iconHiddenView")[0].hidden = true;
+            form.render();
+        });
+
+        $("#iconShowView1").on('click', function (e) {
+            console.log("smile");
+            password1[0].type = "text";
+            $("#iconShowView1")[0].hidden = true;
+            $("#iconHiddenView1")[0].hidden = false;
+            form.render();
+        });
+        $("#iconHiddenView1").on('click', function (e) {
+            console.log("cry");
+            password1[0].type = "password";
+            $("#iconShowView1")[0].hidden = false;
+            $("#iconHiddenView1")[0].hidden = true;
+            form.render();
+        });
+
+        $("#txtCode1").blur(function (event) {
+            let pwd1 = $("#txtCode").val();
+            let pwd2 = $("#txtCode1").val();
+            if (pwd1 !== pwd2) {
+                alert("两次输入密码不一致！");
+                //$("#txtCodetext").html('<span style="color: #f00;">两个密码不一致</span>');
+                //let pwd3 = $(" ").val();
+            } else {
+                //alert("密码一致！");
+                //$("#txtCode1text").html('<span style="color: #0c0;">正确</span>');
+                let pwd3 = $("#txtCode").val();
+            };
+            
+         });
+         $("#txtCode").val(newPassword);
+        // 填充
+    
+
+
+        form.on('submit(user-add)', function (data) {
+            var param;
+
+            $.ajax({
+                url: ApiBaseUrl + 'api/userInfo/UpdateAnyPassword?user_id=' + userId ,
+                // + "&newPassword=" + newPassword ,
+                //url: ApiBaseUrl + 'api/User/UpdateAnyPassword',
+                data: {
+                    //user_id: $("#txtId").val(),
+                    //newPassword: $.md5($("#txtCode").val())
+                    newPassword: $("#txtCode").val()
+                },
+
+                dataType: 'json',
+                contentType: 'application/json',
+                type: 'get',
+                headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('imt_token')
+                },
+                success: function (responseJSON) {
+                    if (responseJSON.code == 0) {
+                        layer.msg("密码成功修改！", { icon: 1, time: 1500 }, function () {
+                            parent.layui.table.reload("user");
+                            parent.layer.close(parent.layer.getFrameIndex(window.name));
+                        });
+                    }
+                    else if (responseJSON.code == 1) {
+                        layer.msg(responseJSON.msg, { icon: 2, time: 1500 });
+                    }
+                }
+            })
+            return false;
+        });
+
+    })
+
+
+    function closeLayer() {
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭
+    }
+
+
+</script>
+<script>
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#test33'
+            , trigger: 'click'
+            //, click: 'trigger'
+            , type: 'datetime'
+            , theme: '#393D49'
+        });
+    });
+</script>

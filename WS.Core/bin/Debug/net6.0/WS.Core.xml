@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WS.Core</name>
+    </assembly>
+    <members>
+        <member name="T:WS.Core.ApiResponse">
+            <summary>
+            功能描述    ：接口相应实体  
+            创 建 者    ：pc
+            创建日期    ：2020/11/11 16:27:23 
+            最后修改者  ：pc
+            最后修改日期：2020/11/11 16:27:23 
+            </summary>
+        </member>
+        <member name="P:WS.Core.ApiResponse.code">
+            <summary>
+            代码：0-成功，1-失败，2-异常，100-登录过期
+            </summary>
+        </member>
+        <member name="P:WS.Core.ApiResponse.msg">
+            <summary>
+            错误信息描述
+            </summary>
+        </member>
+        <member name="P:WS.Core.ApiResponse.count">
+            <summary>
+            记录条数
+            </summary>
+        </member>
+        <member name="P:WS.Core.ApiResponse.data">
+            <summary>
+            具体的记录
+            </summary>
+        </member>
+        <member name="T:WS.Core.CacheHelper">
+            <summary>
+            功能描述    ：CacheHelper  
+            创 建 者    ：pc
+            创建日期    ：2020/11/17 9:34:31 
+            最后修改者  ：pc
+            最后修改日期：2020/11/17 9:34:31 
+            </summary>
+        </member>
+        <member name="M:WS.Core.CacheHelper.Add(System.String,System.Object)">
+            <summary>
+            增加或覆盖缓存
+            </summary>
+            <param name="key"></param>
+            <param name="val"></param>
+        </member>
+        <member name="T:WS.Core.LogType">
+            <summary>
+            日志类别
+            </summary>
+        </member>
+        <member name="F:WS.Core.LogType.AppLog">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:WS.Core.LogType.ServiceLog">
+            <summary>
+            windows服务日志
+            </summary>
+        </member>
+        <member name="F:WS.Core.LogType.PluginLog">
+            <summary>
+            插件日志
+            </summary>
+        </member>
+        <member name="F:WS.Core.LogType.ConsoleLog">
+            <summary>
+            控制台
+            </summary>
+        </member>
+        <member name="T:WS.Core.Log4Helper">
+            <summary>
+            log4日志文件记录
+            </summary>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Error(System.String)">
+            <summary>
+            错误日志 ERROR
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.ErrorFormat(System.String,System.Object[])">
+            <summary>
+            错误日志 ERROR
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Error(System.String,System.Exception)">
+            <summary>
+            错误日志 ERROR
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Debug(System.String)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.DebugFormat(System.String,System.Object[])">
+            <summary>
+            调试日志 DEBUG
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Info(System.String)">
+            <summary>
+            日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.InfoFormat(System.String,System.Object[])">
+            <summary>
+            日志
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.WarnFormat(System.String,System.Object[])">
+            <summary>
+             警告日志 WARN
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Warn(System.String)">
+            <summary>
+             警告日志 WARN
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Warn(System.String,System.Exception)">
+            <summary>
+            警告日志 WARN
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.FatalFormat(System.String,System.Object[])">
+            <summary>
+             系统奔溃日志 Fatal
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Fatal(System.String)">
+            <summary>
+             系统奔溃日志 WARN
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:WS.Core.Log4Helper.Fatal(System.String,System.Exception)">
+            <summary>
+            系统奔溃日志 
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:WS.Core.Md5Helper">
+            <summary>
+            功能描述    ：Md5Helper  
+            创 建 者    ：pc
+            创建日期    ：2020/11/25 15:33:19 
+            最后修改者  ：pc
+            最后修改日期：2020/11/25 15:33:19 
+            </summary>
+        </member>
+        <member name="M:WS.Core.Md5Helper.MD5Encrypt16(System.String)">
+            <summary>
+            16位MD5加密
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.Md5Helper.MD5Encrypt32(System.String)">
+            <summary>
+            32位MD5加密
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.Md5Helper.MD5Encrypt32(System.String,System.String)">
+            <summary>
+            32位MD5加密，加盐
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.Md5Helper.CreateSalt(System.Int32)">
+            <summary>
+            生成指定长度的盐，默认长度为10
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.Md5Helper.MD5Encrypt32lower(System.String)">
+            <summary>
+            32位MD5加密
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.Md5Helper.sha256(System.String)">
+            <summary>
+            sha256 加密 64位16进制
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.Core.MyConvert">
+            <summary>
+            功能描述    ：Mapper  
+            创 建 者    ：pc
+            创建日期    ：2020/11/20 14:12:59 
+            最后修改者  ：pc
+            最后修改日期：2020/11/20 14:12:59 
+            </summary>
+        </member>
+        <member name="M:WS.Core.MyConvert.TrimSql(System.String)">
+            <summary>
+            移除字符串中的SQL注入字符
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.Mapper``2(``1)">
+            <summary>
+            数据实体类型转换
+            </summary>
+            <typeparam name="O">输出类型</typeparam>
+            <typeparam name="I">输入类型</typeparam>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.ToDecimal(System.String)">
+            <summary>
+            返回字符串的decimal形式，错误将返回0
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.ToFloat(System.String)">
+            <summary>
+            返回字符串的decimal形式，错误将返回0
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.ToDateStr(System.String,System.String)">
+            <summary>
+            转换时间格式;
+            将yyyyMMddHHmmss格式转换为任意格式
+            </summary>
+            <param name="time14">yyyyMMddHHmmss格式</param>
+            <param name="fmt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.ToDateTime(System.String)">
+            <summary>
+            转换时间格式;
+            将yyyyMMddHHmmss格式转换为任意格式
+            </summary>
+            <param name="time14">yyyyMMddHHmmss格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.DayOfEndweek(System.DateTime)">
+            <summary>
+            当期日期所在周的最后一天
+            </summary>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.DayOfStartweek(System.DateTime)">
+            <summary>
+            当期日期所在周的第一天的日期
+            </summary>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.Core.MyConvert.WeekOfYear(System.DateTime)">
+            <summary>
+            获取指定日期，在为一年中为第几周
+            </summary>
+            <param name="dt">指定时间</param>
+            <reutrn>返回第几周</reutrn>
+        </member>
+    </members>
+</doc>

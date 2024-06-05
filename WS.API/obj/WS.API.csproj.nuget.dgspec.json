@@ -1,0 +1,550 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/WS.API.csproj": {}
+  },
+  "projects": {
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/WS.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/WS.API.csproj",
+        "projectName": "WS.API",
+        "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/WS.API.csproj",
+        "packagesPath": "/Users/macbookair/.nuget/packages/",
+        "outputPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookair/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/sdk/7.0.311/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj"
+              },
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.BLL/WS.Db.BLL.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.BLL/WS.Db.BLL.csproj"
+              },
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj"
+              },
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AspectCore.Extensions.Autofac": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "FreeSql": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.DbContext": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Provider.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Repository": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.10.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj",
+        "projectName": "WS.Core",
+        "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj",
+        "packagesPath": "/Users/macbookair/.nuget/packages/",
+        "outputPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookair/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.BLL/WS.Db.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.BLL/WS.Db.BLL.csproj",
+        "projectName": "WS.Db.BLL",
+        "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.BLL/WS.Db.BLL.csproj",
+        "packagesPath": "/Users/macbookair/.nuget/packages/",
+        "outputPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.BLL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookair/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/WS.Db.DAL.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/WS.Db.DAL.csproj"
+              },
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj"
+              },
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FreeSql": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.DbContext": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Provider.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Repository": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/WS.Db.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/WS.Db.DAL.csproj",
+        "projectName": "WS.Db.DAL",
+        "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/WS.Db.DAL.csproj",
+        "packagesPath": "/Users/macbookair/.nuget/packages/",
+        "outputPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookair/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Core/WS.Core.csproj"
+              },
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FreeSql": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.DbContext": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Provider.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Repository": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj",
+        "projectName": "WS.Db.IBLL",
+        "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/WS.Db.IBLL.csproj",
+        "packagesPath": "/Users/macbookair/.nuget/packages/",
+        "outputPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.IBLL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookair/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj": {
+                "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FreeSql": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.DbContext": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Provider.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Repository": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj",
+        "projectName": "WS.Db.Model",
+        "projectPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/WS.Db.Model.csproj",
+        "packagesPath": "/Users/macbookair/.nuget/packages/",
+        "outputPath": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.Db.Model/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookair/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FreeSql": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.DbContext": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Provider.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "FreeSql.Repository": {
+              "target": "Package",
+              "version": "[3.2.698, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

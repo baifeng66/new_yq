@@ -1,0 +1,305 @@
+﻿@{ 
+    ViewData["Title"] = "角色管理";
+    ViewData["group"] = "角色管理";
+    ViewData["groupurl"] = "#"; 
+}
+
+<style>
+    form{
+          padding: 10px;
+    }
+</style>
+@Html.Partial("_location")
+<form class="layui-form" action="">
+    <div class="body-box">
+        <div class="layui-row">
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                @*<div class="layui-form-item">
+                    <label class="layui-form-label">角色：</label>
+                    <div class="layui-input-block">
+                        <select id="role_id" name="role_id" lay-search>
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>*@
+            </div>
+            <div class="layui-col-lg3 layui-col-md4 layui-col-sm6">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">角色名：</label>
+                    <div class="layui-input-block">
+                        <input id="keywords" type="text" class="layui-input" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn layui-btn-normal" style="margin-left: 15px" lay-submit="" onclick="searchrole()">
+                        <i class="layui-icon layui-icon-search"></i>
+                        检索
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table id="role" lay-filter="role" style="background: #ffffff"></table>
+    </div>
+</form>
+
+<script type="text/html" id="role-bar">
+
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>   
+    <button type="button" class="layui-btn layui-btn-sm" title="权限" lay-event="chgMenu">
+        权限
+    </button>
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+
+
+</script>
+
+
+<script type="text/html" id="role-toolbar">
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" onclick="addrole()">
+        <i class="layui-icon layui-icon-add-1"></i>
+        新增角色
+    </button>
+@*    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" onclick="editusercode()">
+        <i class="layui-icon">&#xe642;</i>
+        修改密码
+    </button>*@
+</script>
+
+
+
+<script>
+    let table;
+        layui.use(['table', 'form', 'jquery', 'layer'], function () {
+            table = layui.table;
+            let form = layui.form;
+            let layer = layui.layer;
+            let $ = layui.jquery;
+
+            table.render({
+                elem: '#role'
+                , autoSort: false
+        
+                , limit: 20
+                , limits: [10, 20, 30, 50, 100]
+                , height: "full-125"
+                , defaultToolbar: ['filter']
+                , toolbar: "#role-toolbar"
+           
+                , url: ApiBaseUrl + "api/baseRole/listall"                
+                , headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('imt_token')
+                    
+                }
+                , request: {
+                    pageName: 'page', //页码的参数名称，默认：page
+                    limitName: 'size' //每页数据量的参数名，默认：limit
+                }
+                , page: true //开启分页
+                , cols:
+                [
+                    [ //表头
+                    
+                        { field: 'roleName', title: '角色名', align: "center", width: "25%", style: "font-size:medium" }                      
+                   
+                        , { field: 'createTime', title: '创建时间', align: "center", width: "25%", style: "font-size:medium" }
+                        , { field: 'state', title: '状态', align: "center", width: "20%", style: "font-size:medium",
+                            templet: function (d) {
+                                    var html = '<div style="color:red">禁用中</div>';
+                                    if (d.state == '1') {
+                                        html = '<div style="color:green">启用中</div>';
+                                    }                                  
+                                    return html;
+                                }}
+                        
+                        , { title: "操作", toolbar: "#role-bar", align: "center", width: "30%", style: "font-size:medium" }
+                    ]
+                ]
+                , parseData: function (responseJSON) {
+                    if (responseJSON.status == "error") {
+                        layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 });
+                    }
+                    return {
+                        "code": responseJSON.code,
+                        "msg": responseJSON.msg,
+                        "count": responseJSON.count,
+                        "data": responseJSON.data
+                    };
+                }
+                , done: function (res, curr, count) {
+                    var beforeCurr = curr;
+                    var dataLength = res.data.length;
+                    var count = res.count;
+                    if (dataLength == 0 && count != 0) {
+                        table.reload("role", {
+                            page: { curr: beforeCurr - 1 }
+                        })
+                    }
+                }
+        });
+
+        table.on("tool(role)", function (obj) {
+            if (obj.event === 'remove') {
+                window.remove(obj);
+            }
+            if (obj.event === "edit") {
+                window.edit(obj);
+            }
+            if (obj.event === "chgMenu") {
+                window.chgMenu(obj);
+            }
+            if (obj.event === 'chgState') {
+                window.chgState(obj);
+            }
+            
+        });
+
+            
+
+        window.edit = function (obj) {
+            layer.open({
+                type: 2,
+                title: "<strong>修改角色</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: encodeURI("../Role/AddRole"
+                    + '?roleId=' + obj.data['roleId']                   
+                    + '?roleName=' + obj.data['roleName']
+                    + '?createTime=' + obj.data['createTime']
+                    + '?state=' + obj.data['state']),
+                shadeClose: true,
+                cancel: function (index, layero) {
+                    table.reload("role");
+                }
+            });
+        }
+        window.chgMenu = function (obj) {
+            
+            layer.open({
+                type: 2,
+                title: "<strong>修改权限</strong>",
+                shade: 0.1,
+                area: ["600px", "500px"],
+                content: encodeURI("../Role/ChangeMenu"
+                    + '?roleId=' + obj.data['roleId']                   
+                    ),
+                shadeClose: true,
+                cancel: function (index, layero) {
+                    table.reload("role");
+                }
+            });
+        }
+        
+
+        window.chgState = function (obj) {
+            var roleId = obj.data['roleId'];
+            var roleName = obj.data['roleName'];
+            var is_visible = obj.data['state'];
+            if (is_visible) {
+                layer.confirm('请问您是否确定要禁用角色"' + roleName + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/baseRole/forbidOrActive?roleId=" + roleId,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("角色已禁用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("role");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+                });
+            }
+            else {
+                layer.confirm('请问您是否确定要启用角色"' + roleName + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/baseRole/forbidOrActive?roleId=" + roleId,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("角色已启用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("role");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+                    
+                });
+            }
+        }
+
+        window.remove = function (obj) {
+            layer.confirm('请问您确定要永久删除此角色及其所有记录吗?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                layer.close(index);
+                $.ajax({
+                    url: ApiBaseUrl+  'api/baseRole/delete?id=' + obj.data['roleId'],
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    type: 'delete',
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", "Bearer " + imt_token);
+                        
+                        request.setRequestHeader("uid", imt_uid);
+                    },
+                    success: function (responseJSON) {
+                        if (responseJSON.code == 0) {
+                            layer.msg("角色" + obj.data['roleName'] + "删除成功！", { icon: 1, time: 1500 }, function () {
+                                table.reload("role");
+                            });
+                        }
+                        else if (responseJSON.code == 1) {
+                            layer.msg(responseJSON.msg, { icon: 2, time: 1500 });
+                        }
+                        else if (responseJSON.code == "invalid-token") {
+                            layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 }, function () {
+                                window.localStorage.token = null;
+                                if (top.location.href != location.href) { top.location.href = "../Home/Login"; }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    });
+
+    function searchrole() {
+        var regu = "^[ ]+$";
+        var re = new RegExp(regu);
+        var name = $("#keywords").val();
+        if(name=='' || re.test(name)){
+            table.reload('role', {
+                url: ApiBaseUrl + "api/baseRole/listall"          
+                , page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        }
+        else{
+            table.reload('role', {
+                url: ApiBaseUrl + "api/baseRole/page?roleName="+name          
+                , page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        }
+        
+    }
+
+        function addrole() {
+            layer.open({
+                type: 2,
+                title: "<strong>添加角色</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: "../Role/AddRole"
+            });
+        }
+    
+
+   
+    
+    </script>
+

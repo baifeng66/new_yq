@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WS.Db.Model</name>
+    </assembly>
+    <members>
+        <member name="P:WS.Db.Model.baseDict.dictId">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.dictCode">
+            <summary>
+            字典编码，唯一键索引
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.dictName">
+            <summary>
+            字典说明
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.dictPcode">
+            <summary>
+            上级编码，base为一级编码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.logId">
+            <summary>
+            日志ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.content">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.logtype">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.userId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:WS.Db.Model.baseLog.ApiLogType">
+            <summary>
+            数据接口日志类型
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuIcon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuPid">
+            <summary>
+            上级菜单
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuUrl">
+            <summary>
+            菜单链接
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.openWay">
+            <summary>
+            打开方式，当前页面/新窗口
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.orderBy">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="T:WS.Db.Model.ext.baseMenuExt">
+            <summary>
+            说明：
+            作者：llw
+            时间：2023/8/15 10:19:54
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.baseMenuExt.role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.baseMenuExt.children">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="T:WS.Db.Model.ext.layui_tree">
+            <summary>
+            功能描述    ：树形控件数据  
+            创 建 者    ：pc
+            创建日期    ：2020/11/30 9:21:21 
+            最后修改者  ：pc
+            最后修改日期：2020/11/30 9:21:21 
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.title">
+            <summary>
+            显示的内容
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.id">
+            <summary>
+             	节点唯一索引值，用于对指定节点进行各类操作
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.field">
+            <summary>
+            节点字段名
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.href">
+            <summary>
+            点击节点弹出新窗口对应的 url。需开启 isJump 参数
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.spread">
+            <summary>
+            是否默认展开
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.checked">
+            <summary>
+            节点是否初始为选中状态（如果开启复选框的话），默认 false
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.disabled">
+            <summary>
+            节点是否为禁用状态。默认 false
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.ext.layui_tree.children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.keyword.id">
+            <summary>
+            关键字id
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.keyword.gid">
+            <summary>
+            关键字分组id
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.keyword.keywordName">
+            <summary>
+            关键字名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.keywordGroup.id">
+            <summary>
+            关键字分组id
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.keywordGroup.name">
+            <summary>
+            关键字分组名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.region.city_code">
+            <summary>
+            城市编码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.region.code">
+            <summary>
+            区域唯一编码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.region.level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.region.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.region.province_code">
+            <summary>
+            省份编码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.region.qc">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.userId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.createBy">
+            <summary>
+            添加人
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.lastLoginTime">
+            <summary>
+            上一次登录时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.loginName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.loginPwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.phoneNum">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.rid">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.trueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.updateBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.updateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+    </members>
+</doc>

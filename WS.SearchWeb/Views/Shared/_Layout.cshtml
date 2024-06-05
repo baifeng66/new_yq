@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/layui/css/layui.css" rel="stylesheet" />
+    @*<link href="~/lib/layui/css/layui-blue.css?v=1.0.0812" rel="stylesheet" />*@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/layui/layui.js"></script>
+    <script src="~/js/date.format.js" asp-append-version="true"></script>
+    <script src="~/js/jqeury-ext.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.md5.js" asp-append-version="true"></script>
+    @*<script src="~/js/ChinesePY.js" asp-append-version="true"></script>*@
+    <script src="~/lib/echarts-5.0.0/echarts.min.js"></script>
+</head>
+<body>
+    @RenderBody()
+    
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

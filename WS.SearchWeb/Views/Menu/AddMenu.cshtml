@@ -1,0 +1,306 @@
+﻿@{ 
+    ViewData["Title"] = "添加菜单";
+    ViewData["group"] = "菜单管理";
+    ViewData["groupurl"] = "/menu/index"; 
+}
+<style>
+    .required{
+        color: red;
+    }
+     .layui-fluid{
+        padding-top: 10px;
+    }
+    .layui-form-label{
+        width: 118px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .layui-input-block{
+        margin-left: 141px;
+    }
+</style>
+<form class="layui-form" action="">
+    <div class="layui-fluid">
+        <div class="layui-form-item">
+            <label class="layui-form-label">菜单名：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input id="txtName" type="text" class="layui-input" lay-verify="required" placeholder="请输入菜单名">                                
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">图标：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input id="txtIcon" type="text" class="layui-input" lay-verify="required" placeholder="请输入图标">                                
+            </div>
+        </div>
+         <div class="layui-form-item">
+            <label class="layui-form-label">上级菜单：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <select id="txtPid" name="selectPlatform" lay-verify="required" lay-search></select>      
+                @*<input id="txtPid" type="text" class="layui-input" lay-verify="required" placeholder="请输入上级菜单">                                *@
+            </div>
+        </div>
+         <div class="layui-form-item">
+            <label class="layui-form-label">菜单链接：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input id="txtUrl" type="text" class="layui-input" lay-verify="required" placeholder="请输入菜单链接">                                
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">打开方式：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input type="radio" id="curr" name="showmenu" value="当前页面" title="当前页面" checked>
+                <input type="radio" id="new" name="showmenu" value="新窗口" title="新窗口">      
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态：<span class="required">*</span></label>
+            <div class="layui-input-block">
+                <input type="radio" id="open" name="qtshow" value="1" title="启用" checked>
+                <input type="radio" id="close" name="qtshow" value="0" title="禁用">
+            </div>
+        </div>
+        
+        <br />
+        <div class="bottom layui-form-item" style="text-align: center;">
+            <div class="button-container">
+                <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm1" lay-submit="" lay-filter="menu-add" style="width: 60px;">
+                    <font size="2">确认</font>
+                </button>
+                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm1" style="width: 60px;" onclick="closeLayer();">取消</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="~/js/jquery.md5.js"></script>
+
+<script>layui.use(['form', 'jquery'], function () {
+        let form = layui.form;
+        let $ = layui.jquery;
+   
+        //解决input回车页面刷新
+        $(document).keydown(function (event) {
+            if (event.keyCode == 13) {
+                $("*").blur();
+            }
+        });
+
+        var menuId = getParams("menuId");
+
+        $.GET("api/baseMenu/listall","", function (data, status, xhr) {
+            if (data.code == 0) {
+                var options = "<option value='0' selected>" + "此为一级菜单" + "</option>";
+                data.data.forEach((item,index) =>{                   
+                    if(item.menuPid == 0){
+                        options += "<option value='" + item.menuId + "'>" + item.menuName + "</option>";                       
+                    }
+                })
+                $("#txtPid").html(options);
+                if (menuId) {
+                    $("#txtPid").val(getParams("menuPid"));
+                    form.render("select");           
+                }
+                form.render("select");    
+            } else {
+                layer.alert(data.msg);
+            }
+        });
+ 
+        
+   
+        if (menuId) {
+            
+            var menuIcon = getParams("menuIcon");          
+            var menuName = getParams("menuName");          
+            var menuPid = getParams("menuPid");          
+            var menuUrl = getParams("menuUrl");          
+            var openWay = getParams("openWay");          
+            var state = getParams("state");          
+            // 填充
+            $("#txtName").val(menuName);
+            $("#txtIcon").val(menuIcon);
+            $("#txtPid").val(menuPid);
+            $("#txtUrl").val(menuUrl);
+            console.log(menuUrl)
+            
+            if (openWay == "当前页面") {
+                
+                $("#curr").prop("checked", true);
+                form.render();
+            }
+            else if (state == "新窗口") {
+                
+                $("#new").prop("checked", true);
+                form.render();
+            }
+
+            if (state == "1") {
+                console.log(state);
+                $("#open").prop("checked", true);
+                form.render();
+            }
+            else if (state == "0") {
+                console.log(state);
+                $("#close").prop("checked", true);
+                form.render();
+            }
+
+            //console.log($('input:radio[name="qtshow"]:checked').val());
+
+            form.render();
+        }
+        
+        form.on('submit(menu-add)', function (data) {
+            var openWay;
+            if ($('input:radio[name="showmenu"]:checked').val() == "当前页面") {
+                openWay = '当前页面';
+            }
+            else {
+                openWay = '新窗口';
+            }
+
+            var is_visible;
+            if ($('input:radio[name="qtshow"]:checked').val() == "1") {
+                is_visible = '1';
+            }
+            else {
+                is_visible = '0';
+            }
+
+
+            var url;
+            let time = new Date();
+            let nowTime = timestampToTime(time.toLocaleString('en-US',{hour12: false}).split(" "));
+            if (menuId) {
+                
+                var param = {
+                    menuId: parseInt(menuId),
+                    menuName: $("#txtName").val(),
+                    menuIcon: $("#txtIcon").val(),                              
+                    menuPid: $("#txtPid").val(),      
+                    menuUrl: $("#txtUrl").val(),
+                    createTime: getParams("createTime"),
+                    state: is_visible,                   
+                    openWay: openWay,                   
+                    orderBy: 0,                   
+                };
+                url = ApiBaseUrl + 'api/baseMenu/edit';
+            }
+            else {
+                var param = {
+                    menuName: $("#txtName").val(),
+                    menuIcon: $("#txtIcon").val(),                              
+                    menuPid: $("#txtPid").val(),      
+                    menuUrl: $("#txtUrl").val(),                                                                         
+                    createTime:nowTime,
+                    state: is_visible,   
+                    openWay: openWay,   
+                    orderBy: 0,    
+                };
+                url = ApiBaseUrl + 'api/baseMenu/add';
+            }
+         
+
+            $.ajax({
+                url: url,
+                data: JSON.stringify(param),
+                dataType: 'json',
+                contentType: 'application/json',
+                type: 'post',
+                beforeSend: function (request) {
+                    request.setRequestHeader("Authorization", "Bearer " + imt_token);
+                    request.setRequestHeader("type", 0);
+                    request.setRequestHeader("uid", imt_uid);
+                },
+                success: function (responseJSON) {
+                    if (responseJSON.code == 0) {
+                        layer.msg(responseJSON.msg, { icon: 1, time: 1500 }, function () {
+                            parent.layui.table.reload("menu");
+                            parent.layer.close(parent.layer.getFrameIndex(window.name));
+                        });
+                    }
+                    else if (responseJSON.code == 1) {
+                        layer.msg(responseJSON.msg, { icon: 2, time: 1500 });
+                    }
+                }
+            })
+            return false;
+        });
+    });
+
+    function timestampToTime(times) {
+        var checkTime = function (i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+        let time = times[1]
+        let mdy = times[0]
+        mdy = mdy.split('/')
+        let month = parseInt(mdy[0]);
+        month = checkTime(month);
+        let day = parseInt(mdy[1]);
+        day = checkTime(day);
+        let year = parseInt(mdy[2])
+        return year + '-' + month + '-' + day + ' ' + time
+    }
+
+
+    function closeLayer() {
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭
+    }
+
+    //获取参数
+    function getParams(param_id) {
+        var query = decodeURI(window.location.href).split("?")
+        query.shift();     
+        for (var i = 0; i < query.length; i++) {
+            var pair = query[i].split("=");
+            if (pair[0] == param_id) {
+                return pair[1];
+            }
+        }
+        
+    }
+    //修改参数
+    function replaceParams(Pname, NewVal) {
+        var ori_Url = this.location.href.toString();
+        var reg = eval('/(' + Pname + '=)([^&]*/gi');
+        var new_Url = ori_Url.replace(reg, Pname + '=' + NewVal);
+        this.location = new_Url;
+        return new_Url;
+    }</script>
+<script>
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#test33'
+            , trigger: 'click'
+            //, click: 'trigger'
+            , type: 'datetime'
+            , theme: '#393D49'
+            , min: getNowFormatDate()
+        });
+
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate +
+            " " + date.getHours() + seperator2 + date.getMinutes() +
+            seperator2 + date.getSeconds();
+        return currentdate;
+    }
+    });
+    </script>

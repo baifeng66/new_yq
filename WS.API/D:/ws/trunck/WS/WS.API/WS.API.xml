@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WS.API</name>
+    </assembly>
+    <members>
+        <member name="T:WS.API.Controllers.BaseController">
+            <summary>
+            基础类
+            </summary>
+        </member>
+        <member name="F:WS.API.Controllers.BaseController._ibaseLogBLL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.BaseController.#ctor(WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <param name="ibaseLogBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="P:WS.API.Controllers.BaseController.LoginType">
+            <summary>
+            0-web,1-安卓，2-ios
+            </summary>
+        </member>
+        <member name="P:WS.API.Controllers.BaseController.uid">
+            <summary>
+            用户的ID
+            </summary>
+        </member>
+        <member name="P:WS.API.Controllers.BaseController.Token">
+            <summary>
+            获取传入的token
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.BaseController.addlog(WS.Db.Model.baseLog.ApiLogType,System.String)">
+            <summary>
+            添加日志
+            </summary>
+            <param name="type">日志类型</param>
+            <param name="msg">消息内容，拼接在类型字符串后面</param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.baseDictController">
+            <summary>
+            数据字典控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.baseDictController.#ctor(WS.Db.IBLL.IbaseDictBLL,WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+             构造函数
+             </summary>
+             <param name="iservice"></param>
+             <param name="ibaseLogBLL"></param>
+             <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.baseDictController.listall">
+            <summary>
+            获取数据字典表所有记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseDictController.delete(System.Int32)">
+            <summary>
+            删除指定id的数据字典记录
+            </summary>
+            <param name="id">字典ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseDictController.add(WS.Db.Model.baseDict)">
+            <summary>
+            添加数据字典记录
+            </summary>
+            <param name="mode">字典的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseDictController.edit(WS.Db.Model.baseDict)">
+            <summary>
+            修改字典
+            </summary>
+            <param name="mode">字典的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseDictController.page(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="dictName">单位名称</param>
+            <param name="dictCode">字典编码</param>
+            <param name="dictPCode">上级编码</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.baseLogController">
+            <summary>
+            日志控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.baseLogController.#ctor(WS.Db.IBLL.IbaseLogBLL,WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iservice"></param>
+            <param name="ibaseLogBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.baseLogController.delete(System.Int32)">
+            <summary>
+            删除日志
+            </summary>
+            <param name="id">日志的id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseLogController.add(WS.Db.Model.baseLog)">
+            <summary>
+            添加日志
+            </summary>
+            <param name="mode">日志的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseLogController.edit(WS.Db.Model.baseLog)">
+            <summary>
+            修改日志
+            </summary>
+            <param name="mode">日志的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseLogController.page(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="content">日志内容</param>
+            <param name="userId">用户ID</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.baseMenuController">
+            <summary>
+            �˵�����
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.#ctor(WS.Db.IBLL.IbaseMenuBLL,WS.Db.IBLL.IbaseLogBLL,WS.Db.IBLL.IuserInfoBLL,WS.Db.IBLL.IroleMenuBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            ���캯��
+            </summary>
+            <param name="iservice"></param>
+            <param name="ibaseLogBLL"></param>
+            <param name="iuserInfoBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.listall">
+            <summary>
+            ��ȡ���в˵���Ϣ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.delete(System.Int32)">
+            <summary>
+            ɾ���˵�
+            </summary>
+            <param name="id">�˵���id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.add(WS.Db.Model.baseMenu)">
+            <summary>
+            ��Ӳ˵�
+            </summary>
+            <param name="mode">�˵���ʵ�弯��</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.edit(WS.Db.Model.baseMenu)">
+            <summary>
+            �޸Ĳ˵�
+            </summary>
+            <param name="mode">�˵���ʵ�弯��</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.page(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            ��ҳ��ѯ����
+            </summary>
+            <param name="menuName">�˵�����</param>
+            <param name="state">״̬��0-���ã�1-����</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.treeall(System.Int32)">
+             <summary>
+            ��ȡ���в˵����������Щ���Ѿ�����ɫ��Ȩ�Ĳ˵�
+             </summary>
+             <param name="rid">ϵͳ��ɫid</param>
+             <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.usermenu">
+            <summary>
+            ��ȡ�û�������Ȩ�Ĳ˵�Ȩ��
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseMenuController.set(System.Int32,System.String)">
+            <summary>
+            ���ý�ɫ�Ĳ˵�Ȩ��
+            </summary>
+            <param name="rid">��ɫid</param>
+            <param name="ids">�˵�Ȩ���ַ���</param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.baseRoleController">
+            <summary>
+            角色控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.baseRoleController.#ctor(WS.Db.IBLL.IbaseRoleBLL,WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iservice"></param>
+            <param name="ibaseLogBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.baseRoleController.listall">
+            <summary>
+            获取角色表所有记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseRoleController.delete(System.Int32)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="id">角色的id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseRoleController.add(WS.Db.Model.baseRole)">
+            <summary>
+            添加角色
+            </summary>
+            <param name="mode">角色的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseRoleController.edit(WS.Db.Model.baseRole)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="mode">角色的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.baseRoleController.page(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="roleName">角色名称</param>
+            <param name="state">状态，0-禁用，1-启用</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.keywordController">
+            <summary>
+            关键字控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.keywordController.page(System.String,System.Nullable{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="keyName"></param>
+            <param name="gid"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.keywordController.save(WS.Db.Model.keyword)">
+            <summary>
+            修改、新增关键字
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.keywordController.delete(System.Int32)">
+            <summary>
+            删除关键字
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.keywordGroupController">
+            <summary>
+            关键字分组控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.keywordGroupController.page(System.String,System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="name"></param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.keywordGroupController.save(WS.Db.Model.keywordGroup)">
+            <summary>
+            修改、新增关键字分组
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.keywordGroupController.delete(System.Int32)">
+            <summary>
+            删除关键字分组
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.regionController">
+            <summary>
+            行政区域控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.regionController.#ctor(WS.Db.IBLL.IregionBLL,WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iservice"></param>
+            <param name="ibaseLogBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.regionController.delete(System.String)">
+            <summary>
+            删除行政区域
+            </summary>
+            <param name="name">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.regionController.add(WS.Db.Model.region)">
+            <summary>
+            添加行政区域
+            </summary>
+            <param name="mode">角色菜单关联的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.regionController.edit(WS.Db.Model.region)">
+            <summary>
+            修改行政区域
+            </summary>
+            <param name="mode">角色菜单关联的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.regionController.page(System.String,System.String,System.Int16,System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="code">区域唯一编码，查询下级数据，level>1时有效</param>
+            <param name="name">名称</param>
+            <param name="level">0-全部级别，1-省级，2-市级，3-曲线级</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.roleMenuController">
+            <summary>
+            角色菜单关联控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.roleMenuController.#ctor(WS.Db.IBLL.IroleMenuBLL,WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iservice"></param>
+            <param name="ibaseLogBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.roleMenuController.delete(System.Int32)">
+            <summary>
+            删除角色菜单关联表中的一条记录
+            </summary>
+            <param name="id">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.roleMenuController.add(WS.Db.Model.roleMenu)">
+            <summary>
+            添加角色菜单关联记录
+            </summary>
+            <param name="mode">角色菜单关联的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.roleMenuController.edit(WS.Db.Model.roleMenu)">
+            <summary>
+            修改角色菜单关联记录
+            </summary>
+            <param name="mode">角色菜单关联的实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.roleMenuController.page(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="roleId">角色ID</param>
+            <param name="menuId">菜单ID</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WS.API.Controllers.userInfoController">
+            <summary>
+            用户控制
+            </summary>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.#ctor(WS.Db.IBLL.IuserInfoBLL,WS.Db.IBLL.IbaseLogBLL,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iservice"></param>
+            <param name="ibaseLogBLL"></param>
+            <param name="accessor"></param>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.delete(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id">用户的id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.add(WS.Db.Model.userInfo)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="mode">用户实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.edit(WS.Db.Model.userInfo)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.page(System.String,System.Nullable{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            翻页查询数据
+            </summary>
+            <param name="loginName">用户名</param>
+            <param name="userId">用户ID</param>
+            <param name="page"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.forbidOrActive(System.Int32)">
+            <summary>
+            禁用/启用一个用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.getCurrentUser">
+            <summary>
+            获取当前用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.Authenticate(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">用户Md5加密密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:WS.API.Controllers.userInfoController.UpdateAnyPassword(System.Int32,System.String)">
+            <summary>
+            前台用户修改任意用户的密码
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

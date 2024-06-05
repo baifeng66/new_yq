@@ -1,0 +1,153 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>权限框架-登录</title>
+    <link href="~/lib/layui/css/layui.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        .layui-container {
+            position: relative;
+        }
+
+        .gradient {
+            background: rgba(51,51,98,0.8);
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+
+        .loginblock {
+            padding: 10px 30px;
+            color: #fff;
+            background: linear-gradient(to left, #0071ff, #0071ff) left top no-repeat, linear-gradient(to bottom, #0071ff, #0071ff) left top no-repeat, linear-gradient(to left, #0071ff, #0071ff) right top no-repeat, linear-gradient(to bottom, #0071ff, #0071ff) right top no-repeat, linear-gradient(to left, #0071ff, #0071ff) left bottom no-repeat, linear-gradient(to bottom, #0071ff, #0071ff) left bottom no-repeat, linear-gradient(to left, #0071ff, #0071ff) right bottom no-repeat, linear-gradient(to left, #0071ff, #0071ff) right bottom no-repeat;
+            background-size: 5px 20px, 20px 5px, 5px 20px, 20px 5px;
+            left: 380px;
+            position: absolute;
+            width: 30%;
+            height: 230px;
+        }
+
+        .layui-form-label {
+            width: 40px;
+            padding: 9px 0px;
+        }
+
+        .layui-input-block {
+            margin-left: 50px;
+        }
+
+        body {
+            background-image: url("/img/login_bg.jpeg");
+            background-repeat: round;
+        }
+
+        .header-title {
+            font-size: 48px;
+            font-family: KaiTi;
+            color: #fff;
+            margin: 10px 20px;
+        }
+
+        .lg-head {
+            font-size: 20px;
+            text-align: center;
+            margin: 10px 0 30px;
+        }
+
+        .layui-input {
+            background: bottom;
+            color: #fff;
+            border: 1px solid #105c8e;
+            outline: none !important;
+            padding-left: 25px;
+        }
+
+        .layui-icon {
+            margin: 10px 5px;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <p class="header-title">
+        权限框架
+    </p>
+    <div class="layui-container">
+        <div class="gradient">
+            <div class="loginblock">
+                <form class="layui-form" action="">
+                    <div class="layui-row">
+                        <div class="layui-col-md12 lg-head">
+                            用户登录
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-username"></i>
+                        <input type="text" name="loginname" lay-verify="" placeholder="用户名/手机号" value="" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-password"></i>
+                        <input type="password" name="pwd" lay-verify="" placeholder="请输入密码" value="" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-item" style="margin-top: 25px;">
+                        <button class="layui-btn  layui-btn-normal" style="width:100%" lay-submit lay-filter="formlogin">立即登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/layui/layui.js"></script>
+    <script src="~/js/jqeury-ext.js" asp-append-version="true"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="~/js/jquery.md5.js"></script>
+    <script>
+        layui.use(['layer', 'form', 'element'], function () {
+            var layer = layui.layer;
+            form = layui.form;
+            var element = layui.element;
+            form.on('submit(formlogin)', function (data) {
+                if (!data.field.loginname || data.field.loginname.length == 0) {
+                    layer.msg("登录名不能为空！");
+                    return false;
+                }
+                if (!data.field.pwd || data.field.pwd.length == 0) {
+                    layer.msg("密码不能为空！");
+                    return false;
+                }
+                
+                //layer.msg(JSON.stringify(data.field));
+               $.GET("api/userInfo/Authenticate?username=" + data.field.loginname + "&password=" + $.md5(data.field.pwd+'abc1234567'), "", function (data, status, xhr) {
+                    if (data.code == 0) {
+                        sessionStorage.setItem("imt_token", data.data.token);
+                        sessionStorage.setItem("imt_uid", data.data.uid);
+                        sessionStorage.setItem("imt_last", data.data.lastLoginTime);
+                        //console.log(imt_last);
+                        layer.msg('登录成功', { icon: 1, time: 1500 });
+                        location.href = "/home/index";
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+
+               
+                form.render();
+                return false;
+                
+            });
+        });
+    </script>
+</body>
+</html>

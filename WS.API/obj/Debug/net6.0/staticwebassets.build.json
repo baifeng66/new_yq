@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "PDdH3Ly9e5CLWlUEW0A++YvaiauSbM7RbNGJqPaf+SU=",
+  "Source": "WS.API",
+  "BasePath": "_content/WS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WS.API/wwwroot",
+      "Source": "WS.API",
+      "ContentRoot": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/wwwroot/",
+      "BasePath": "_content/WS.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/wwwroot/favicon.ico",
+      "SourceId": "WS.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.API/wwwroot/",
+      "BasePath": "_content/WS.API",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    }
+  ]
+}

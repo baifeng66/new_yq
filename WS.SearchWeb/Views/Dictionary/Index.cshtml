@@ -1,0 +1,313 @@
+﻿@{ 
+    ViewData["Title"] = "字典管理";
+    ViewData["group"] = "字典管理";
+    ViewData["groupurl"] = "#"; 
+}
+
+<style>
+    form{
+          padding: 10px;
+    }
+</style>
+@Html.Partial("_location")
+<form class="layui-form" action="">
+    <div class="body-box">
+        <div class="layui-row">
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                @*<div class="layui-form-item">
+                    <label class="layui-form-label">角色：</label>
+                    <div class="layui-input-block">
+                        <select id="role_id" name="role_id" lay-search>
+                            <option value="-1">请选择</option>
+                        </select>
+                    </div>
+                </div>*@
+            </div>
+            <div class="layui-col-lg3 layui-col-md4 layui-col-sm6">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">字典名：</label>
+                    <div class="layui-input-block">
+                        <input id="key_name" type="text" class="layui-input" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-lg3 layui-col-md4 layui-col-sm6">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">上级编码：</label>
+                    <div class="layui-input-block">
+                        <input id="key_pcode" type="text" class="layui-input" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-lg2 layui-col-md3 layui-col-sm4">
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn layui-btn-normal" style="margin-left: 15px" lay-submit="" onclick="searchdict()">
+                        <i class="layui-icon layui-icon-search"></i>
+                        检索
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table id="dict" lay-filter="dict" style="background: #ffffff"></table>
+    </div>
+</form>
+
+<script type="text/html" id="dict-bar">
+    {{# if(d.state == true) {  }}
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>   
+    @*<button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="禁用" lay-event="chgState">
+        禁用
+    </button>*@
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+    {{# } else {  }}
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" title="修改" lay-event="edit">
+        修改
+    </button>
+    @*<button type="button" class="layui-btn layui-btn-sm" title="启用" lay-event="chgState">
+        启用
+    </button>*@
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" title="删除" lay-event="remove">
+        删除
+    </button>
+    {{# } }}
+
+</script>
+
+
+<script type="text/html" id="dict-toolbar">
+    <button type="button" class="layui-btn layui-btn-sm layui-btn-warm" onclick="addDict()">
+        <i class="layui-icon layui-icon-add-1"></i>
+        新增字典
+    </button>
+@*    <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" onclick="editusercode()">
+        <i class="layui-icon">&#xe642;</i>
+        修改密码
+    </button>*@
+</script>
+
+
+
+<script>
+    let table;
+        layui.use(['table', 'form', 'jquery', 'layer'], function () {
+            table = layui.table;
+            let form = layui.form;
+            let layer = layui.layer;
+            let $ = layui.jquery;
+
+            table.render({
+                elem: '#dict'
+                , autoSort: false
+        
+                , limit: 20
+                , limits: [10, 20, 30, 50, 100]
+                , height: "full-125"
+                , defaultToolbar: ['filter']
+                , toolbar: "#dict-toolbar"
+           
+                , url: ApiBaseUrl + "api/baseDict/listall"                
+                , headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('imt_token')
+                }
+                , request: {
+                    pageName: 'page', //页码的参数名称，默认：page
+                    limitName: 'size' //每页数据量的参数名，默认：limit
+                }
+                , page: true //开启分页
+                , cols:
+                [
+                    [ //表头
+                    
+                        { field: 'dictName', title: '字典名', align: "center", width: "25%", style: "font-size:medium" }                      
+                   
+                        , { field: 'dictCode', title: '字典编码', align: "center", width: "25%", style: "font-size:medium" }
+                        , { field: 'dictPcode', title: '上级编码', align: "center", width: "25%", style: "font-size:medium" }
+                        , { field: 'state', title: '状态', align: "center", width: "10%", style: "font-size:medium",
+                            templet: function (d) {
+                                    var html = '<div style="color:red">禁用中</div>';
+                                    if (d.state == '1') {
+                                        html = '<div style="color:green">启用中</div>';
+                                    }                                  
+                                    return html;
+                                }}
+                        
+                        , { title: "操作", toolbar: "#dict-bar", align: "center", width: "15%", style: "font-size:medium" }
+                    ]
+                ]
+                , parseData: function (responseJSON) {
+                    if (responseJSON.status == "error") {
+                        layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 });
+                    }
+                    return {
+                        "code": responseJSON.code,
+                        "msg": responseJSON.msg,
+                        "count": responseJSON.count,
+                        "data": responseJSON.data
+                    };
+                }
+                , done: function (res, curr, count) {
+                    var beforeCurr = curr;
+                    var dataLength = res.data.length;
+                    var count = res.count;
+                    if (dataLength == 0 && count != 0) {
+                        table.reload("dict", {
+                            page: { curr: beforeCurr - 1 }
+                        })
+                    }
+                }
+        });
+
+        table.on("tool(dict)", function (obj) {
+            if (obj.event === 'remove') {
+                window.remove(obj);
+            }
+            if (obj.event === "edit") {
+                window.edit(obj);
+            }
+            if (obj.event === 'chgState') {
+                window.chgState(obj);
+            }
+            
+        });
+
+            
+
+        window.edit = function (obj) {
+            layer.open({
+                type: 2,
+                title: "<strong>修改字典</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: encodeURI("../Dictionary/AddDict"
+                    + '?dictId=' + obj.data['dictId']                   
+                    + '?dictCode=' + obj.data['dictCode']
+                    + '?dictName=' + obj.data['dictName']
+                    + '?dictPcode=' + obj.data['dictPcode']
+                    + '?state=' + obj.data['state']),
+                shadeClose: true,
+                cancel: function (index, layero) {
+                    table.reload("dict");
+                }
+            });
+        }
+
+        
+
+        window.chgState = function (obj) {
+            var dictId = obj.data['dictId'];
+            var dictName = obj.data['dictName'];
+            var is_visible = obj.data['state'];
+            if (is_visible) {
+                layer.confirm('请问您是否确定要禁用字典"' + dictName + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/baseDict/forbidOrActive?dictId=" + dictId,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("字典已禁用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("role");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+                });
+            }
+            else {
+                layer.confirm('请问您是否确定要启用字典"' + dictName + '"?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                    layer.close(index);
+                    $.GET("api/baseDict/forbidOrActive?dictId=" + dictId,"", function (data, status, xhr) {
+                        if (data.code == 0) {
+                            layer.msg("字典已启用！", { icon: 1, time: 1000 }, function () {
+                                    table.reload("dict");
+                             });
+                         } else {
+                                layer.alert(data.msg);
+                         }
+                    });
+                    
+                });
+            }
+        }
+
+        window.remove = function (obj) {
+            layer.confirm('请问您确定要永久删除此字典吗?', { icon: 3, area: ['450px', '180px'], title: "提示" }, function (index) {
+                layer.close(index);
+                $.ajax({
+                    url: ApiBaseUrl+  'api/baseDict/delete?id=' + obj.data['dictId'],
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    type: 'delete',
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", "Bearer " + imt_token);
+                        
+                        request.setRequestHeader("uid", imt_uid);
+                    },
+                    success: function (responseJSON) {
+                        if (responseJSON.code == 0) {
+                            layer.msg("字典" + obj.data['dictName'] + "删除成功！", { icon: 1, time: 1500 }, function () {
+                                table.reload("dict");
+                            });
+                        }
+                        else if (responseJSON.code == 1) {
+                            layer.msg(responseJSON.msg, { icon: 2, time: 1500 });
+                        }
+                        else if (responseJSON.code == "invalid-token") {
+                            layer.msg(responseJSON.errorMessage, { icon: 2, time: 1500 }, function () {
+                                window.localStorage.token = null;
+                                if (top.location.href != location.href) { top.location.href = "../Home/Login"; }
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    });
+
+    function searchdict() {
+        var regu = "^[ ]+$";
+        var re = new RegExp(regu);
+        var name = $("#key_name").val();
+        var pcode = $("#key_pcode").val();
+        //table.reload('dict', {
+        //    url: ApiBaseUrl + "api/baseDict/page?dictName="+name+"&dictPCode="+pcode         
+        //    , page: {
+        //        curr: 1 //重新从第 1 页开始
+        //    }
+        //});
+        if((name=='' || re.test(name)) && (pcode=='' || re.test(pcode))){
+            table.reload('dict', {
+                url: ApiBaseUrl + "api/baseDict/listall"          
+                , page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        }
+        else{
+            table.reload('dict', {
+                url: ApiBaseUrl + "api/baseDict/page?dictName="+name+"&dictPCode="+pcode      
+                , page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        }
+        
+    }
+
+        function addDict() {
+            layer.open({
+                type: 2,
+                title: "<strong>添加字典</strong>",
+                shade: 0.1,
+                area: ["550px", "450px"],
+                content: "../Dictionary/AddDict"
+            });
+        }
+    
+
+   
+    
+    </script>
+

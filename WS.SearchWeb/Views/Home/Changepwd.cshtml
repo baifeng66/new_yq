@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+    <style>
+           .old{
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+            input{
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid #cfcfcf;
+                background-color: #FDFDFD;
+                padding: 5px;
+                width: calc(100% - 95px);
+                
+            }
+            .tag{
+                font-size: 18px;
+            }
+            .new{
+                margin-top: 10px;
+                margin-left: 10px;
+                
+            }
+            .top{
+                margin-bottom: 8px;
+            }
+            .required{
+                color:red;
+                font-size:18px;
+            }
+            .btn{
+                background-color: #1e9fff;
+                color: #fff;
+                border: 0px;
+                width: 200px;
+                height: 50px;
+                border-radius: 4px;
+                display: block;
+                margin: 18px auto;
+            }
+    </style>
+    <div class="old">
+        <div class="top">
+            <span class="tag">原密码：</span>
+            <span class="required">*</span>
+        </div>
+        <input id="old_pwd" type="password" placeholder="请输入原密码">
+    </div>
+    <div class="new">
+        <div class="top">
+            <span class="tag">新密码：</span>
+            <span class="required">*</span>
+        </div>
+        <input id="new_pwd" type="password" placeholder="请输入新密码">
+    </div>
+    <div class="new">
+        <div class="top">
+            <span class="tag">确认密码：</span>
+            <span class="required">*</span>
+        </div>
+        <input id="new_pwd_ok" type="password" placeholder="请再次输入新密码">
+    </div>
+    <button class="layui-btn layui-btn-primary layui-btn-see btn" onclick="submit()">
+            修改密码
+    </button>
+ @section scripts
+{   <script src="~/lib/jquery/dist/jquery.md5.js"></script>
+    <script>
+        layui.use(['layer'], function () {
+        let layer = layui.layer;        
+        });
+        function submit(){
+            if($("#old_pwd").val().length == 0 ||$("#new_pwd").val().length == 0 ||$("#new_pwd_ok").val().length == 0 ){
+                layer.msg("必选项不能为空", { icon: 2, time: 1500 });
+            }else if($("#new_pwd").val() != $("#new_pwd_ok").val()){
+                layer.msg("两次输入的密码不一致", { icon: 2, time: 1500 });
+            }else if($.md5($("#old_pwd").val()+'abc1234567') != imt_pwd.toLowerCase()){
+                layer.msg("原密码输入错误", { icon: 2, time: 1500 });
+            }
+            else{
+                oldPwd = $.md5($("#old_pwd").val());
+                //newPwd = $.md5($("#new_pwd").val());
+                newPwd = $("#new_pwd").val();
+                if(verify(newPwd)){
+                    $.GET("api/userInfo/UpdateAnyPassword?user_id="+imt_uid+"&newPassword="+newPwd, {
+                        }, function (res) {                   
+                        if (res.code == 0) {
+                            layer.msg(res.msg, { icon: 1, time: 1500 });
+                            setTimeout(function() {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);//关闭当前页
+                            }, 1500);
+                                                                     
+                        }else{
+                            layer.msg(res.msg, { icon: 2, time: 1500 });
+                        }
+                    }, false);
+                }
+            }
+            
+        }
+
+        function verify(pwd) {
+            if (pwd.length < 6) {
+                return "密码必须大于6位数";
+            }
+            reg=/^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$).{6,}$/;
+            if (reg.test(pwd)) {
+               return 1;
+            }else{
+                alert("密码强度不符合要求，至少包含大小写字母、数字、特殊字符中的两种");
+                return 0;
+            }            
+        }
+        
+    </script>
+}

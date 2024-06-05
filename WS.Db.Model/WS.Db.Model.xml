@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WS.Db.Model</name>
+    </assembly>
+    <members>
+        <member name="P:WS.Db.Model.baseDict.dictId">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.dictCode">
+            <summary>
+            字典编码，唯一键索引
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.dictName">
+            <summary>
+            字典说明
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.dictPcode">
+            <summary>
+            上级编码，base为一级编码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseDict.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.logId">
+            <summary>
+            日志ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.content">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.logtype">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseLog.userId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:WS.Db.Model.baseLog.ApiLogType">
+            <summary>
+            数据接口日志类型
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuIcon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuPid">
+            <summary>
+            上级菜单，0-一级菜单
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.menuUrl">
+            <summary>
+            菜单链接
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.openWay">
+            <summary>
+            打开方式，当前页面/新窗口
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseMenu.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseRole.roleId">
+            <summary>
+            角色ID，0-系统管理员
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseRole.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseRole.roleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.baseRole.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.caseId">
+            <summary>
+            编号，自动生成
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.appraisal">
+            <summary>
+            鉴定类型
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.caseName">
+            <summary>
+            案件名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.caseNum">
+            <summary>
+            案号：唯一索引
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.caseType">
+            <summary>
+            案件分类：刑事，民事
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.content">
+            <summary>
+            全文
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.createBy">
+            <summary>
+            添加人
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.defendant">
+            <summary>
+            被告
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.docType">
+            <summary>
+            文书类型
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.gist">
+            <summary>
+            裁判要旨
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.issue">
+            <summary>
+            诉争焦点
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.isWelf">
+            <summary>
+            是否公益诉讼
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.judgeDate">
+            <summary>
+            裁判日期
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.place">
+            <summary>
+            法院所在地名称
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.placeCode">
+            <summary>
+            法院所在地编码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.plaintiff">
+            <summary>
+            原告
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.pubDate">
+            <summary>
+            公开日期
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.reason">
+            <summary>
+            案由
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.regDate">
+            <summary>
+            立案日期
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.repair">
+            <summary>
+            修复方式
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.tort">
+            <summary>
+            侵权事实
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.tryCou">
+            <summary>
+            审理法院
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.tryLevel">
+            <summary>
+            审理级别
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.tryProc">
+            <summary>
+            审判程序
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.unionlaw">
+            <summary>
+            是否共同诉讼
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.updateBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.caseDoc.updateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.roleMenu.roleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.roleMenu.menuId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.userId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.createBy">
+            <summary>
+            添加人
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.createTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.loginName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.loginPwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.phoneNum">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.rid">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.state">
+            <summary>
+            状态，0-禁用，1-启用
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.trueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.updateBy">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.updateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:WS.Db.Model.userInfo.lastLoginTime">
+            <summary>
+            上一次登录时间
+            </summary>
+        </member>
+    </members>
+</doc>

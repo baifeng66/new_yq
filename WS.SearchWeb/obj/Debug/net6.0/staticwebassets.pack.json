@@ -1,0 +1,589 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/scopedcss/projectbundle/WS.SearchWeb.bundle.scp.css",
+      "PackagePath": "staticwebassets/WS.SearchWeb.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/img/login_bg.jpeg",
+      "PackagePath": "staticwebassets/img/login_bg.jpeg"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/js/date.format.js",
+      "PackagePath": "staticwebassets/js/date.format.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/js/jqeury-ext.js",
+      "PackagePath": "staticwebassets/js/jqeury-ext.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/js/jquery.md5.js",
+      "PackagePath": "staticwebassets/js/jquery.md5.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.common.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.common.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.common.js.map",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.common.js.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.common.min.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.common.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.esm.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.esm.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.esm.js.map",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.esm.js.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.esm.min.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.esm.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.js.map",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.js.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.min.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.simple.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.simple.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.simple.js.map",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.simple.js.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/echarts.simple.min.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/echarts.simple.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/extension/bmap.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/extension/bmap.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/extension/bmap.js.map",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/extension/bmap.js.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/extension/bmap.min.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/extension/bmap.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/extension/dataTool.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/extension/dataTool.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/extension/dataTool.js.map",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/extension/dataTool.js.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/echarts-5.0.0/extension/dataTool.min.js",
+      "PackagePath": "staticwebassets/lib/echarts-5.0.0/extension/dataTool.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/layui-blue.css",
+      "PackagePath": "staticwebassets/lib/layui/css/layui-blue.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/layui.css",
+      "PackagePath": "staticwebassets/lib/layui/css/layui.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/layui.mobile.css",
+      "PackagePath": "staticwebassets/lib/layui/css/layui.mobile.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/code.css",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/code.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/laydate/default/laydate.css",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/laydate/default/laydate.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/layer/default/icon-ext.png",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/layer/default/icon-ext.png"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/layer/default/icon.png",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/layer/default/icon.png"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/layer/default/layer.css",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/layer/default/layer.css"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/layer/default/loading-0.gif",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/layer/default/loading-0.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/layer/default/loading-1.gif",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/layer/default/loading-1.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/css/modules/layer/default/loading-2.gif",
+      "PackagePath": "staticwebassets/lib/layui/css/modules/layer/default/loading-2.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/font/iconfont.eot",
+      "PackagePath": "staticwebassets/lib/layui/font/iconfont.eot"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/font/iconfont.svg",
+      "PackagePath": "staticwebassets/lib/layui/font/iconfont.svg"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/font/iconfont.ttf",
+      "PackagePath": "staticwebassets/lib/layui/font/iconfont.ttf"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/font/iconfont.woff",
+      "PackagePath": "staticwebassets/lib/layui/font/iconfont.woff"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/font/iconfont.woff2",
+      "PackagePath": "staticwebassets/lib/layui/font/iconfont.woff2"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/0.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/0.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/1.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/1.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/10.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/10.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/11.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/11.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/12.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/12.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/13.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/13.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/14.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/14.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/15.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/15.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/16.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/16.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/17.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/17.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/18.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/18.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/19.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/19.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/2.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/2.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/20.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/20.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/21.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/21.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/22.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/22.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/23.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/23.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/24.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/24.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/25.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/25.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/26.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/26.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/27.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/27.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/28.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/28.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/29.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/29.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/3.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/3.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/30.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/30.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/31.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/31.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/32.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/32.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/33.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/33.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/34.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/34.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/35.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/35.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/36.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/36.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/37.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/37.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/38.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/38.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/39.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/39.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/4.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/4.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/40.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/40.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/41.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/41.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/42.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/42.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/43.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/43.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/44.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/44.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/45.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/45.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/46.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/46.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/47.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/47.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/48.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/48.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/49.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/49.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/5.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/5.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/50.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/50.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/51.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/51.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/52.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/52.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/53.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/53.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/54.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/54.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/55.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/55.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/56.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/56.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/57.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/57.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/58.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/58.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/59.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/59.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/6.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/6.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/60.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/60.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/61.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/61.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/62.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/62.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/63.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/63.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/64.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/64.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/65.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/65.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/66.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/66.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/67.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/67.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/68.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/68.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/69.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/69.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/7.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/7.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/70.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/70.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/71.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/71.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/8.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/8.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/images/face/9.gif",
+      "PackagePath": "staticwebassets/lib/layui/images/face/9.gif"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/carousel.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/carousel.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/code.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/code.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/colorpicker.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/colorpicker.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/element.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/element.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/flow.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/flow.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/form.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/form.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/jquery.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/jquery.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/laydate.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/laydate.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/layedit.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/layedit.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/layer.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/layer.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/laypage.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/laypage.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/laytpl.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/laytpl.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/mobile.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/mobile.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/rate.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/rate.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/slider.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/slider.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/table.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/table.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/transfer.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/transfer.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/tree.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/tree.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/upload.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/upload.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/lay/modules/util.js",
+      "PackagePath": "staticwebassets/lib/layui/lay/modules/util.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/layui.all.js",
+      "PackagePath": "staticwebassets/lib/layui/layui.all.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/layui.js",
+      "PackagePath": "staticwebassets/lib/layui/layui.js"
+    },
+    {
+      "Id": "/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/wwwroot/lib/layui/xm-select.js",
+      "PackagePath": "staticwebassets/lib/layui/xm-select.js"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.WS.SearchWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.WS.SearchWeb.props",
+      "PackagePath": "build\\WS.SearchWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.WS.SearchWeb.props",
+      "PackagePath": "buildMultiTargeting\\WS.SearchWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.WS.SearchWeb.props",
+      "PackagePath": "buildTransitive\\WS.SearchWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

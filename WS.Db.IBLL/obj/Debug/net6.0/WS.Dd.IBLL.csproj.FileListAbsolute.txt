@@ -1,0 +1,15 @@
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\bin\Debug\net6.0\WS.Dd.IBLL.deps.json
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\bin\Debug\net6.0\WS.Dd.IBLL.dll
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\bin\Debug\net6.0\WS.Dd.IBLL.pdb
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\bin\Debug\net6.0\WS.Db.Model.dll
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\bin\Debug\net6.0\WS.Db.Model.pdb
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.csproj.AssemblyReference.cache
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.AssemblyInfoInputs.cache
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.AssemblyInfo.cs
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.csproj.CoreCompileInputs.cache
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.csproj.CopyComplete
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.dll
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\refint\WS.Dd.IBLL.dll
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\WS.Dd.IBLL.pdb
+E:\WorkCode\★SVN_JKW\生态环保案件检索\trunck\WS\WS.Dd.IBLL\obj\Debug\net6.0\ref\WS.Dd.IBLL.dll

@@ -1,0 +1,93 @@
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/appsettings.Development.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/appsettings.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.staticwebassets.runtime.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.exe
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.deps.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.runtimeconfig.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.MvcApplicationPartsAssemblyInfo.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.RazorAssemblyInfo.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.RazorAssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.WS.SearchWeb.Microsoft.AspNetCore.StaticWebAssets.props
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.build.WS.SearchWeb.props
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.WS.SearchWeb.props
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.WS.SearchWeb.props
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.pack.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.build.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.development.json
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/scopedcss/bundle/WS.SearchWeb.styles.css
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/scopedcss/projectbundle/WS.SearchWeb.bundle.scp.css
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/refint/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.pdb
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.genruntimeconfig.cache
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/ref/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/生态环保案件检索/trunck/WS/WS.SearchWeb/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/appsettings.Development.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/appsettings.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.staticwebassets.runtime.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.exe
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.deps.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.runtimeconfig.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.csproj.AssemblyReference.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.GeneratedMSBuildEditorConfig.editorconfig
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.AssemblyInfoInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.AssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.csproj.CoreCompileInputs.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.MvcApplicationPartsAssemblyInfo.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.RazorAssemblyInfo.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.RazorAssemblyInfo.cs
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.WS.SearchWeb.Microsoft.AspNetCore.StaticWebAssets.props
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.build.WS.SearchWeb.props
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.WS.SearchWeb.props
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.WS.SearchWeb.props
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.pack.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.build.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.development.json
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/scopedcss/bundle/WS.SearchWeb.styles.css
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/scopedcss/projectbundle/WS.SearchWeb.bundle.scp.css
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/refint/WS.SearchWeb.dll
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.pdb
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.genruntimeconfig.cache
+E:/WorkCode/★SVN_JKW/1.创建项目/.net core6.0/WS.SearchWeb/obj/Debug/net6.0/ref/WS.SearchWeb.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/appsettings.Development.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/appsettings.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.staticwebassets.runtime.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.deps.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.runtimeconfig.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/bin/Debug/net6.0/WS.SearchWeb.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.csproj.AssemblyReference.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.AssemblyInfoInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.AssemblyInfo.cs
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.csproj.CoreCompileInputs.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.MvcApplicationPartsAssemblyInfo.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.RazorAssemblyInfo.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.RazorAssemblyInfo.cs
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.WS.SearchWeb.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.build.WS.SearchWeb.props
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.WS.SearchWeb.props
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.WS.SearchWeb.props
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.pack.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.build.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/staticwebassets.development.json
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/scopedcss/bundle/WS.SearchWeb.styles.css
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/scopedcss/projectbundle/WS.SearchWeb.bundle.scp.css
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/refint/WS.SearchWeb.dll
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.pdb
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/WS.SearchWeb.genruntimeconfig.cache
+/Users/macbookair/AllCodes/C#Codes/model_副本/WS.SearchWeb/obj/Debug/net6.0/ref/WS.SearchWeb.dll
